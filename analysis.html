@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Credit Score Breakdown</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#007bff",
+                        "background-light": "#f8f9fa",
+                        "background-dark": "#101c22",
+                        "green-accent": "#28a745",
+                        "yellow-accent": "#ffc107",
+                        "red-accent": "#dc3545",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d171b] dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- Page Heading -->
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-4xl font-black tracking-[-0.033em] text-[#0d171b] dark:text-white">Credit Score Details</p>
+<p class="text-base font-normal leading-normal text-[#6c757d] dark:text-gray-400">Here is a detailed breakdown of your credit score.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] dark:bg-primary/30 dark:text-white">
+<span class="truncate">Refresh</span>
+</button>
+</div>
+<!-- Hero Section -->
+<div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-1 p-6 rounded-xl bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700 flex flex-col items-center justify-center">
+<p class="text-base font-medium text-[#6c757d] dark:text-gray-400">Your VantageScore® 3.0</p>
+<p class="text-6xl font-bold text-primary my-2">785</p>
+<div class="flex items-center gap-2">
+<span class="text-green-accent font-medium">Excellent</span>
+<span class="material-symbols-outlined text-green-accent">verified</span>
+</div>
+<p class="text-xs text-[#6c757d] dark:text-gray-400 mt-4">Last updated: Today</p>
+</div>
+<div class="md:col-span-2 p-6 rounded-xl bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-center">
+<h3 class="text-lg font-bold mb-4 text-[#0d171b] dark:text-white">Score History</h3>
+<div class="h-48 w-full">
+<img class="h-full w-full object-cover" data-alt="A line graph showing credit score increasing over time." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW1vXMd8P16Z3ILwHHA8aQqehVfnAmjg1iNjj8bs_w_CKNHna6NVHtG7l63kbrO0lT5C7yurnjT4_8Y9zQnUaK0emIcQft-F5mdQ99UdFbLMA5c9JTs3U5qCbva5MWVnaLkjX-tG9SYGWoItaxzbkGMZQ5Z1-Sm4ODdNN1hfBh1s5aSTlaueIRxg8Ieslp_4ZogTRHRyjBZ-42PToSD1ZPjVQGg_AonxwflH53VcotwC7kw4SmYbfcJ1ln3h3ubiWs0qcNINU0To3_"/>
+</div>
+</div>
+</div>
+<!-- Credit Factor Breakdown -->
+<div class="p-4">
+<h2 class="text-[22px] font-bold tracking-[-0.015em] pb-3 pt-5 text-[#0d171b] dark:text-white">Credit Factor Breakdown</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Factor Card: Payment History -->
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-[#0d171b] dark:text-white">Payment History</p>
+<span class="text-sm font-semibold text-green-accent">Excellent</span>
+</div>
+<p class="text-sm text-[#6c757d] dark:text-gray-400">On-Time Payments: 100%</p>
+<div class="rounded-full bg-green-accent/20 h-2.5">
+<div class="h-2.5 rounded-full bg-green-accent" style="width: 100%;"></div>
+</div>
+<details class="group mt-2">
+<summary class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary">
+<span>Show Details</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
+<p class="mb-2">You have 0 late payments across all your accounts. Consistently paying bills on time is one of the most important factors for a healthy credit score.</p>
+<p class="font-semibold text-[#0d171b] dark:text-white">Tip: Keep up the great work! Always pay at least the minimum amount due on or before your due date.</p>
+</div>
+</details>
+</div>
+<!-- Factor Card: Credit Utilization -->
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-[#0d171b] dark:text-white">Credit Utilization</p>
+<span class="text-sm font-semibold text-green-accent">Good</span>
+</div>
+<p class="text-sm text-[#6c757d] dark:text-gray-400">Credit Card Use: 15%</p>
+<div class="rounded-full bg-green-accent/20 h-2.5">
+<div class="h-2.5 rounded-full bg-green-accent" style="width: 85%;"></div>
+</div>
+<details class="group mt-2">
+<summary class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary">
+<span>Show Details</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
+<p class="mb-2">Your credit utilization, or the amount of your available credit you're using, is low. Lenders see this as a positive sign that you manage your credit responsibly.</p>
+<p class="font-semibold text-[#0d171b] dark:text-white">Tip: Try to keep your overall credit utilization below 30% for the best results.</p>
+</div>
+</details>
+</div>
+<!-- Factor Card: Credit Age -->
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-[#0d171b] dark:text-white">Length of Credit History</p>
+<span class="text-sm font-semibold text-yellow-accent">Fair</span>
+</div>
+<p class="text-sm text-[#6c757d] dark:text-gray-400">Average Credit Age: 5 years</p>
+<div class="rounded-full bg-yellow-accent/20 h-2.5">
+<div class="h-2.5 rounded-full bg-yellow-accent" style="width: 50%;"></div>
+</div>
+<details class="group mt-2">
+<summary class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary">
+<span>Show Details</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
+<p class="mb-2">Your average credit age is moderate. A longer credit history generally shows lenders that you have more experience managing credit over time.</p>
+<p class="font-semibold text-[#0d171b] dark:text-white">Tip: Avoid closing your oldest credit accounts, even if you don't use them often, as this can shorten your credit history.</p>
+</div>
+</details>
+</div>
+<!-- Factor Card: Credit Mix -->
+<div class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-between">
+<p class="text-lg font-bold text-[#0d171b] dark:text-white">Credit Mix</p>
+<span class="text-sm font-semibold text-green-accent">Good</span>
+</div>
+<p class="text-sm text-[#6c757d] dark:text-gray-400">Active Accounts: 6</p>
+<div class="rounded-full bg-green-accent/20 h-2.5">
+<div class="h-2.5 rounded-full bg-green-accent" style="width: 70%;"></div>
+</div>
+<details class="group mt-2">
+<summary class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary">
+<span>Show Details</span>
+<span class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
+<p class="mb-2">You have a healthy mix of different types of credit, such as credit cards, a mortgage, and an auto loan. This demonstrates that you can manage various forms of debt.</p>
+<p class="font-semibold text-[#0d171b] dark:text-white">Tip: Having a mix of revolving credit (like credit cards) and installment loans (like a mortgage or auto loan) can be beneficial.</p>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
