@@ -1,0 +1,30 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Custom Checkbox Style */
+.custom-checkbox {
+  --checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');
+}
+
+/* Progress Bar Widths */
+.progress-w-25 { width: 25%; }
+.progress-w-35 { width: 35%; }
+.progress-w-50 { width: 50%; }
+.progress-w-70 { width: 70%; }
+.progress-w-75 { width: 75%; }
+.progress-w-85 { width: 85%; }
+.progress-w-100 { width: 100%; }
+
+/* Background Avatars & Images */
+.user-avatar-1 { background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkjs1BUHjWmd23JnoNsajEoaoMH22GcugMm-GU4ikP3qEWsdbepJltlIV7-nBROWG6Rq46r9q9Yndjt1XunEx4rZpNptqlHWVteXE7Hfwsw26s4aFais9EpoNDet-j-5KCenhFc5AhxcMl5JNI0KwBhmWTSExnsZvAZDG7s9OblLFlfW1YFXtQaiC7xo8XawWq8G49DRiudKqAEGDXbejwmQqsY8dzijgpbA7ieYQaIvRKCtb8w389hmJLrqL9TXzlrMjb0jAzNJb6"); }
+.user-avatar-2 { background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDErNG0tTWAXCQTW2OWuvZyfv9g9MMWJKwEfh_gRLFwRAKmSPkckVysP2wEUyVc9kCMQhupxSCmQKSdDLx1mVaSROyVff5dqUBowiOYhvZ11xCWSbA4hvjDLgfy5HiucRA16sXozBufd8TRReszQwvkCm-jHTXFA2BszSl_O6yu9V_c0maUQ1aR1ENsl6FhwtAW2iHdgL7LZ-Xe97Rv0W-wfg5ezZpcbsZm2iEvY9foEOMP2f2l1E-HUW6NtxVSDGST00GVsMaKzAVA"); }
+.user-avatar-3 { background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKRZajDoZK2-f4wcz3cCsL3chOwdjkaL6DMNWaWO-kRWFK1ko9FATGHL9_CNiomGCSSXzMTzsoJk1QXUcC9yj_hPCSaIm2IiHOV0P1OL-xDToufBr2t5aKFywtFhxK0MqU24zaBadeLlS3tR60REqJyKqS_6Ao3gBOY9nvAYoD0zQHuyWbTWsySQt9a5Fg0NLaP5qPRTbFnbxXPEi_tip2WyDXCtgEFHQVGZIMgt8wB72W8EnfAldLP-MUnvSb3gE1-5gIXRpSp-NN"); }
+.user-avatar-4 { background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCMIiCl0EUPNkirPUFdN9tqAWkAOGsTFbzF3F2qOFzqWhfMj_uX8OxtbXxJ2v_SUXsdkYyHCmj3neZ5R2AyulHFGcdBfs2MnVsoaPhZBdfgUyfDnDY7-mKuei3ktrsEAigxc3Rnp0On5MsunUh8mLdJR216BdZat6aPB4hfHzK8TJrctBgdD592vXbg4Kzmqd01ohhdkVuJ3ePhGsp01VIRh4k5sRtyYwYJXrvjbB9ojz2kNV0G-vcBWTu0H5PICy8QZ7da8mMxVn3k"); }
+
+/* Icon Sizes */
+.icon-size-20 { font-size: 20px; }

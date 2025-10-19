@@ -1,89 +1,410 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Link Accounts</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "primary": "#1193d4",
-                "background-light": "#f6f7f8",
-                "background-dark": "#101c22",
-              },
-              fontFamily: {
-                "display": ["Inter", "sans-serif"]
-              },
-              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Link Accounts</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+               success: "#28a745",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
             },
           },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#343a40] dark:text-gray-200"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="flex flex-1 justify-center py-5 px-4">
+          <div
+            class="layout-content-container flex flex-col w-full max-w-md flex-1"
+          >
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7eff3] dark:border-gray-700 px-4 py-3"
+            >
+              <div
+                class="flex items-center gap-4 text-[#0d171b] dark:text-white"
+              >
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-xl font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Axiom
+                </h2>
+              </div>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors"
+              >
+                <span class="truncate">Help</span>
+              </button>
+            </header>
+            <main
+              class="flex flex-col flex-1 justify-between gap-8 p-4 md:p-6"
+            >
+              <div>
+                <div class="flex flex-col gap-3">
+                  <div class="flex gap-6 justify-between">
+                    <p
+                      class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal"
+                    >
+                      Step 1 of 4
+                    </p>
+                  </div>
+                  <div class="rounded bg-[#cfdfe7] dark:bg-gray-700">
+                    <div
+                      class="h-2 rounded bg-primary"
+                      style="width: 25%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap justify-between gap-3 mt-8">
+                  <div class="flex w-full flex-col gap-3">
+                    <p
+                      class="text-3xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white"
+                    >
+                      Link Your Financial Accounts
+                    </p>
+                    <p
+                      class="text-[#4c809a] dark:text-gray-400 text-base font-normal leading-normal"
+                    >
+                      Securely connect your accounts to get a comprehensive
+                      financial overview.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4 mt-8">
+                  <div
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-2xl"
+                      >security</span
+                    >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Bank-Level Security
+                    </h2>
+                  </div>
+                  <div
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-2xl"
+                      >lock</span
+                    >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Data Encryption
+                    </h2>
+                  </div>
+                  <div
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-2xl"
+                      >visibility_off</span
+                    >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      We never store your credentials
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label class="flex gap-x-3 py-3 flex-row items-center">
+                  <input
+                    checked=""
+                    class="custom-checkbox h-5 w-5 rounded border-[#cfdfe7] dark:border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-primary/50"
+                    type="checkbox"
+                  />
+                  <p
+                    class="text-[#343A40] dark:text-gray-300 text-base font-normal leading-normal"
+                  >
+                    I agree to the terms and conditions for linking my
+                    accounts.
+                  </p>
+                </label>
+                <div class="pt-4">
+                  <button
+                    id="open-link-modal"
+                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                  >
+                    <span class="truncate">Link Your Accounts</span>
+                  </button>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Accounts Modal -->
+    <div
+      id="link-accounts-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] flex flex-col"
+      >
+        <div class="flex-shrink-0">
+          <button
+            id="close-link-modal"
+            class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"
+          >
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">
+            Link Your Institution
+          </h3>
+          <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">
+            Select your bank from the list below.
+          </p>
+          <div class="relative mb-4">
+            <input
+              type="text"
+              placeholder="Search for your bank"
+              class="form-input w-full rounded-lg text-text-light dark:text-text-dark bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary h-12 px-4 pl-10"
+            />
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              >search</span
+            >
+          </div>
+        </div>
+        <div class="flex-grow overflow-y-auto space-y-2" id="bank-list">
+          <!-- Bank List -->
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/D82D2F/FFFFFF?text=DBS"
+              alt="DBS Bank logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >DBS Bank</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/E85E53/FFFFFF?text=OCBC"
+              alt="OCBC Bank logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >OCBC Bank</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/0B3E95/FFFFFF?text=UOB"
+              alt="UOB logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >UOB (United Overseas Bank)</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/003B70/FFFFFF?text=Citi"
+              alt="Citibank logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >Citibank</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/DB0011/FFFFFF?text=HSBC"
+              alt="HSBC logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >HSBC</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/007882/FFFFFF?text=SC"
+              alt="Standard Chartered logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >Standard Chartered</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/FFC72C/000000?text=MB"
+              alt="Maybank logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >Maybank</span
+            >
+          </button>
+          <button
+            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
+          >
+            <img
+              src="https://placehold.co/40x40/8B0000/FFFFFF?text=CIMB"
+              alt="CIMB Bank logo"
+              class="h-10 w-10 rounded-full"
+            />
+            <span class="font-medium text-gray-800 dark:text-gray-200"
+              >CIMB Bank</span
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-sm p-8 text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success/20 text-success mb-4">
+                <span class="material-symbols-outlined text-4xl">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">Account Linked Successfully!</h3>
+            <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">Your financial account has been securely linked to your Axiom profile.</p>
+            <button id="continue-button" class="w-full rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
+                Continue
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const linkAccountsModal = document.getElementById(
+          "link-accounts-modal"
+        );
+        const successModal = document.getElementById("success-modal");
+        const openModalBtn = document.getElementById("open-link-modal");
+        const closeModalBtn = document.getElementById("close-link-modal");
+        const bankButtons = document.querySelectorAll("#bank-list button");
+        const continueButton = document.getElementById("continue-button");
+
+        const openLinkModal = () => {
+          if (linkAccountsModal) linkAccountsModal.classList.remove("hidden");
+        };
+
+        const closeLinkModal = () => {
+          if (linkAccountsModal) linkAccountsModal.classList.add("hidden");
+        };
+        
+        const openSuccessModal = () => {
+            if(successModal) successModal.classList.remove("hidden");
         }
-      </script>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#343a40] dark:text-gray-200">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7eff3] dark:border-gray-700 px-10 py-3">
-<div class="flex items-center gap-4 text-[#0d171b] dark:text-white">
-<div class="size-6 text-primary">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Ming Kwan the GOAT</h2>
-</div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors">
-<span class="truncate">Help</span>
-</button>
-</header>
-<main class="flex flex-col gap-8 p-4 md:p-10">
-<div class="flex flex-col gap-3">
-<div class="flex gap-6 justify-between"><p class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal">Step 1 of 4</p></div>
-<div class="rounded bg-[#cfdfe7] dark:bg-gray-700"><div class="h-2 rounded bg-primary" style="width: 25%;"></div></div>
-</div>
-<div class="flex flex-wrap justify-between gap-3">
-<div class="flex min-w-72 flex-col gap-3">
-<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white">Link Your Financial Accounts</p>
-<p class="text-[#4c809a] dark:text-gray-400 text-base font-normal leading-normal">Securely connect your accounts to get a comprehensive financial overview.</p>
-</div>
-</div>
-<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4">
-<div class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center">
-<span class="material-symbols-outlined text-primary text-2xl">security</span>
-<h2 class="text-[#343A40] dark:text-white text-base font-bold leading-tight">Bank-Level Security</h2>
-</div>
-<div class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center">
-<span class="material-symbols-outlined text-primary text-2xl">lock</span>
-<h2 class="text-[#343A40] dark:text-white text-base font-bold leading-tight">Data Encryption</h2>
-</div>
-<div class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center">
-<span class="material-symbols-outlined text-primary text-2xl">visibility_off</span>
-<h2 class="text-[#343A40] dark:text-white text-base font-bold leading-tight">We never store your credentials</h2>
-</div>
-</div>
-<div class="px-4">
-<label class="flex gap-x-3 py-3 flex-row items-center">
-<input checked="" class="h-5 w-5 rounded border-[#cfdfe7] dark:border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-primary/50" style="--checkbox-tick-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e');" type="checkbox"/>
-<p class="text-[#343A40] dark:text-gray-300 text-base font-normal leading-normal">I agree to the terms and conditions for linking my accounts.</p>
-</label>
-</div>
-<div class="flex justify-end pt-4">
-<button class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
-<span class="truncate">Continue</span>
-<span class="material-symbols-outlined ml-2">arrow_forward</span>
-</button>
-</div>
-</main>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+        
+        const closeSuccessModal = () => {
+            if(successModal) successModal.classList.add("hidden");
+        }
+
+        if (openModalBtn) openModalBtn.addEventListener("click", openLinkModal);
+        if (closeModalBtn) closeModalBtn.addEventListener("click", closeLinkModal);
+
+        bankButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                closeLinkModal();
+                openSuccessModal();
+            });
+        });
+        
+        if (continueButton) {
+            continueButton.addEventListener("click", () => {
+                // You can change this to navigate to the next page, e.g., '2nd page.html'
+                closeSuccessModal();
+            });
+        }
+
+
+        if (linkAccountsModal) {
+          linkAccountsModal.addEventListener("click", (event) => {
+            if (event.target === linkAccountsModal) {
+              closeLinkModal();
+            }
+          });
+        }
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            if (
+              linkAccountsModal &&
+              !linkAccountsModal.classList.contains("hidden")
+            ) {
+              closeLinkModal();
+            }
+            if(successModal && !successModal.classList.contains("hidden")) {
+                closeSuccessModal();
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

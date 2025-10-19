@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Social Media Check</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Using a more recent version of Font Awesome for better icon support -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#343a40] dark:text-gray-200"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="flex flex-1 justify-center py-5 px-4">
+          <div
+            class="layout-content-container flex flex-col w-full max-w-md flex-1"
+          >
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7eff3] dark:border-gray-700 px-4 py-3"
+            >
+              <div
+                class="flex items-center gap-4 text-[#0d171b] dark:text-white"
+              >
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-xl font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Axiom
+                </h2>
+              </div>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors"
+              >
+                <span class="truncate">Help</span>
+              </button>
+            </header>
+            <main class="flex flex-col flex-1 gap-8 p-4 md:p-6">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-6 justify-between">
+                  <p
+                    class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal"
+                  >
+                    Step 3 of 4
+                  </p>
+                </div>
+                <div class="rounded bg-[#cfdfe7] dark:bg-gray-700">
+                  <div
+                    class="h-2 rounded bg-primary"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-between gap-3">
+                <div class="flex min-w-72 flex-col gap-3">
+                  <p
+                    class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white"
+                  >
+                    Social Media Checking
+                  </p>
+                  <p
+                    class="text-[#4c809a] dark:text-gray-400 text-base font-normal leading-normal"
+                  >
+                    Connect your social media accounts for identity
+                    verification.
+                  </p>
+                </div>
+              </div>
+              <div class="flex-1 flex items-center">
+                <button
+                  id="open-social-modal"
+                  class="flex w-full flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center justify-center text-left cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-colors"
+                >
+                  <span class="material-symbols-outlined text-primary text-2xl"
+                    >login</span
+                  >
+                  <h2
+                    class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                  >
+                    Connect Social Media
+                  </h2>
+                </button>
+              </div>
+
+              <div class="px-4">
+                <label class="flex gap-x-3 py-3 flex-row items-center">
+                  <input
+                    checked=""
+                    class="custom-checkbox h-5 w-5 rounded border-[#cfdfe7] dark:border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-primary/50"
+                    type="checkbox"
+                  />
+                  <p
+                    class="text-[#343A40] dark:text-gray-300 text-base font-normal leading-normal"
+                  >
+                    I allow to use this data for credit score rating.
+                  </p>
+                </label>
+              </div>
+              <div class="pt-4">
+                <button
+                  class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                >
+                  <span class="truncate">Continue</span>
+                  <span class="material-symbols-outlined ml-2"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Media Modal -->
+    <div
+      id="social-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          id="close-social-modal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">
+          Connect Social Accounts
+        </h3>
+        <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">
+          Log in to your social media accounts for further verification.
+        </p>
+        <div class="space-y-3">
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#0077B5] text-white font-bold hover:bg-[#005E90] transition-colors"
+          >
+            <i class="fa-brands fa-linkedin-in text-xl"></i>
+            <span>Connect with LinkedIn</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-white border border-gray-300 text-gray-700 font-bold hover:bg-gray-50 transition-colors dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:hover:bg-gray-700"
+          >
+            <i class="fa-brands fa-google text-xl"></i>
+            <span>Sign in with Google</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#1877F2] text-white font-bold hover:bg-[#166CDD] transition-colors"
+          >
+            <i class="fa-brands fa-facebook-f text-xl"></i>
+            <span>Login with Facebook</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-black text-white font-bold hover:bg-gray-800 transition-colors"
+          >
+            <i class="fa-brands fa-x-twitter text-xl"></i>
+            <span>Connect with X (Twitter)</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#E1306C] text-white font-bold hover:bg-[#c91c58] transition-colors"
+          >
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <span>Connect with Instagram</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-black text-white font-bold hover:bg-gray-800 transition-colors"
+          >
+            <i class="fa-brands fa-tiktok text-xl"></i>
+            <span>Connect with TikTok</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#FF4500] text-white font-bold hover:bg-[#E03D00] transition-colors"
+          >
+            <i class="fa-brands fa-reddit-alien text-xl"></i>
+            <span>Connect with Reddit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const socialModal = document.getElementById("social-modal");
+        const openSocialModalBtn = document.getElementById("open-social-modal");
+        const closeSocialModalBtn =
+          document.getElementById("close-social-modal");
+
+        const openSocialModal = () => {
+          if (socialModal) socialModal.classList.remove("hidden");
+        };
+        const closeSocialModal = () => {
+          if (socialModal) socialModal.classList.add("hidden");
+        };
+
+        if (openSocialModalBtn)
+          openSocialModalBtn.addEventListener("click", openSocialModal);
+        if (closeSocialModalBtn)
+          closeSocialModalBtn.addEventListener("click", closeSocialModal);
+
+        if (socialModal) {
+          socialModal.addEventListener("click", (event) => {
+            if (event.target === socialModal) closeSocialModal();
+          });
+        }
+
+        document.addEventListener("keydown", (event) => {
+          if (
+            event.key === "Escape" &&
+            socialModal &&
+            !socialModal.classList.contains("hidden")
+          ) {
+            closeSocialModal();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+

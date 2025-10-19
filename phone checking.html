@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>App Permissions</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#343a40] dark:text-gray-200"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="flex flex-1 justify-center py-5 px-4">
+          <div
+            class="layout-content-container flex flex-col w-full max-w-md flex-1"
+          >
+            <header
+              class="flex items-center justify-between whitespace-nowrap px-4 py-3"
+            >
+              <div
+                class="flex items-center gap-4 text-[#0d171b] dark:text-white"
+              >
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-xl font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Axiom
+                </h2>
+              </div>
+            </header>
+
+            <main class="flex flex-col flex-1 justify-center gap-8 p-4 md:p-6">
+                <div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between"><p class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal">Step 4 of 4</p></div>
+<div class="rounded bg-[#cfdfe7] dark:bg-gray-700"><div class="h-2 rounded bg-primary" style="width: 100%;"></div></div>
+              <!-- Main Content -->
+              <div class="flex flex-col gap-8 text-center">
+                <!-- Icon -->
+                <div
+                  class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/20 text-primary"
+                >
+                  <span class="material-symbols-outlined text-4xl"
+                    >phonelink_setup</span
+                  >
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex flex-col gap-3">
+                  <p
+                    class="text-3xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white"
+                  >
+                    Enable Full Screening
+                  </p>
+                  <p
+                    class="text-[#4c809a] dark:text-gray-400 text-base font-normal leading-normal"
+                  >
+                    To build a complete and accurate credit profile, our app needs access to your phone's data. Your information is always encrypted and secure.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Permissions List -->
+              <div class="space-y-4 text-left">
+                <div
+                  class="flex items-start gap-4 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-2xl mt-1"
+                    >sms</span
+                  >
+                  <div>
+                    <h3
+                      class="font-bold text-base text-[#343A40] dark:text-white"
+                    >
+                      SMS Messages
+                    </h3>
+                    <p class="text-sm text-[#4c809a] dark:text-gray-400">
+                      Used to automatically verify transactions and income from
+                      financial institutions.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-4 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-2xl mt-1"
+                    >contacts</span
+                  >
+                  <div>
+                    <h3
+                      class="font-bold text-base text-[#343A40] dark:text-white"
+                    >
+                      Contacts
+                    </h3>
+                    <p class="text-sm text-[#4c809a] dark:text-gray-400">
+                      Helps verify your identity and provides social proof for
+                      your profile.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-4 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-2xl mt-1"
+                    >location_on</span
+                  >
+                  <div>
+                    <h3
+                      class="font-bold text-base text-[#343A40] dark:text-white"
+                    >
+                      Location
+                    </h3>
+                    <p class="text-sm text-[#4c809a] dark:text-gray-400">
+                      Verifies your address and helps prevent fraudulent
+                      activity on your account.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-4 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-2xl mt-1"
+                    >database</span
+                  >
+                  <div>
+                    <h3
+                      class="font-bold text-base text-[#343A40] dark:text-white"
+                    >
+                      Phone & App Metadata
+                    </h3>
+                    <p class="text-sm text-[#4c809a] dark:text-gray-400">
+                      Allows us to understand device usage patterns and app history, which helps in building a more holistic and accurate credit risk profile.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="flex flex-col gap-4 pt-4">
+                <button
+                  class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                >
+                  <span class="truncate">Allow Full Access</span>
+                </button>
+                <button
+                  class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent text-[#4c809a] dark:text-gray-400 text-base font-medium leading-normal hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <span class="truncate">Back</span>
+                </button>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

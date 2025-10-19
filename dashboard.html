@@ -1,232 +1,286 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Credit Score Dashboard</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1193d4",
-                        "background-light": "#f6f7f8",
-                        "background-dark": "#101c22",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Credit Score Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
             },
-        };
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<div class="px-4 md:px-10 lg:px-20 flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 sm:px-6 lg:px-8 py-3">
-<div class="flex items-center gap-4 text-[#0d171b] dark:text-slate-50">
-<div class="size-6">
-<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
-</svg>
-</div>
-<h2 class="text-[#0d171b] dark:text-slate-50 text-xl font-bold leading-tight tracking-[-0.015em]">Ming Kwan the GOAT</h2>
-</div>
-<div class="hidden md:flex flex-1 justify-center gap-8">
-<div class="flex items-center gap-9">
-<a class="text-[#0d171b] dark:text-slate-50 text-sm font-medium leading-normal" href="#">Dashboard</a>
-<a class="text-gray-500 dark:text-gray-400 hover:text-[#0d171b] dark:hover:text-slate-50 text-sm font-medium leading-normal" href="#">Reports</a>
-<a class="text-gray-500 dark:text-gray-400 hover:text-[#0d171b] dark:hover:text-slate-50 text-sm font-medium leading-normal" href="#">Accounts</a>
-<a class="text-gray-500 dark:text-gray-400 hover:text-[#0d171b] dark:hover:text-slate-50 text-sm font-medium leading-normal" href="#">Settings</a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
-<span class="truncate">Improve Your Score</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkjs1BUHjWmd23JnoNsajEoaoMH22GcugMm-GU4ikP3qEWsdbepJltlIV7-nBROWG6Rq46r9q9Yndjt1XunEx4rZpNptqlHWVteXE7Hfwsw26s4aFais9EpoNDet-j-5KCenhFc5AhxcMl5JNI0KwBhmWTSExnsZvAZDG7s9OblLFlfW1YFXtQaiC7xo8XawWq8G49DRiudKqAEGDXbejwmQqsY8dzijgpbA7ieYQaIvRKCtb8w389hmJLrqL9TXzlrMjb0jAzNJb6");'></div>
-</div>
-</header>
-<main class="flex-1 p-4 sm:p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
-<div class="lg:col-span-2 flex flex-col gap-8">
-<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm p-6 flex flex-col md:flex-row items-center gap-8">
-<div class="relative w-48 h-48">
-<svg class="w-full h-full" viewbox="0 0 36 36">
-<path class="text-gray-200 dark:text-gray-700" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
-<path class="text-green-500" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3"></path>
-</svg>
-<div class="absolute inset-0 flex flex-col items-center justify-center">
-<span class="text-4xl font-bold text-[#0d171b] dark:text-slate-50">750</span>
-<span class="text-green-500 font-medium">Good</span>
-</div>
-</div>
-<div class="flex-1 text-center md:text-left">
-<h3 class="text-2xl font-bold text-[#0d171b] dark:text-slate-50 mb-2">Your Credit Score is Looking Great!</h3>
-<p class="text-gray-500 dark:text-gray-400 mb-4">Keep up the good work. A high credit score opens doors to better financial products and lower interest rates.</p>
-<div class="flex flex-col gap-3 p-4">
-<div class="flex gap-6 justify-between">
-<p class="text-[#0d171b] dark:text-slate-50 text-base font-medium leading-normal">Credit Score</p>
-<p class="text-[#0d171b] dark:text-slate-50 text-sm font-normal leading-normal">750</p>
-</div>
-<div class="rounded bg-gray-200 dark:bg-gray-700">
-<div class="h-2 rounded bg-green-500" style="width: 75%;"></div>
-</div>
-<p class="text-green-500 text-sm font-normal leading-normal">Good</p>
-</div>
-</div>
-</div>
-<div>
-<h3 class="text-xl font-bold text-[#0d171b] dark:text-slate-50 mb-4">Key Insights</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="p-4 @container bg-white dark:bg-background-dark/50 rounded-xl shadow-sm">
-<div class="flex flex-col items-stretch justify-start">
-<div class="flex w-full flex-col items-stretch justify-center gap-2 py-4 px-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-orange-500">warning</span>
-<p class="text-[#0d171b] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">Credit Utilization is High</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Your current credit utilization is 45%. Lenders prefer to see this below 30%.</p>
-<button class="self-start mt-2 text-primary dark:text-primary/90 text-sm font-medium leading-normal hover:underline">
-<span>Learn More</span>
-</button>
-</div>
-</div>
-</div>
-<div class="p-4 @container bg-white dark:bg-background-dark/50 rounded-xl shadow-sm">
-<div class="flex flex-col items-stretch justify-start">
-<div class="flex w-full flex-col items-stretch justify-center gap-2 py-4 px-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-green-500">check_circle</span>
-<p class="text-[#0d171b] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">Payment History is Excellent</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">You have a 100% on-time payment history. This is a key factor in your score.</p>
-<button class="self-start mt-2 text-primary dark:text-primary/90 text-sm font-medium leading-normal hover:underline">
-<span>Learn More</span>
-</button>
-</div>
-</div>
-</div>
-<div class="p-4 @container bg-white dark:bg-background-dark/50 rounded-xl shadow-sm">
-<div class="flex flex-col items-stretch justify-start">
-<div class="flex w-full flex-col items-stretch justify-center gap-2 py-4 px-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#0d171b] dark:text-slate-50">credit_card</span>
-<p class="text-[#0d171b] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">New Account Opened</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">A new credit account was opened on your profile recently.</p>
-<button class="self-start mt-2 text-primary dark:text-primary/90 text-sm font-medium leading-normal hover:underline">
-<span>Learn More</span>
-</button>
-</div>
-</div>
-</div>
-<div class="p-4 @container bg-white dark:bg-background-dark/50 rounded-xl shadow-sm">
-<div class="flex flex-col items-stretch justify-start">
-<div class="flex w-full flex-col items-stretch justify-center gap-2 py-4 px-2">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-red-500">report</span>
-<p class="text-[#0d171b] dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">Recent Inquiries</p>
-</div>
-<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">You have 3 hard inquiries in the last 2 years. Too many can lower your score.</p>
-<button class="self-start mt-2 text-primary dark:text-primary/90 text-sm font-medium leading-normal hover:underline">
-<span>Learn More</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<aside class="lg:col-span-1 flex flex-col gap-8">
-<div class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm p-6">
-<div class="flex justify-between items-center mb-4">
-<h3 class="text-xl font-bold text-[#0d171b] dark:text-slate-50">Recent Transactions</h3>
-<div class="flex gap-2">
-<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/30 pl-3 pr-2">
-<p class="text-primary dark:text-primary/90 text-sm font-medium leading-normal">Last 30 Days</p>
-<span class="material-symbols-outlined text-primary dark:text-primary/90" style="font-size: 20px;">expand_more</span>
-</button>
-</div>
-</div>
-<div class="flex flex-col gap-4 overflow-y-auto max-h-96">
-<div class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-<span class="material-symbols-outlined text-primary dark:text-primary/90">shopping_cart</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium text-[#0d171b] dark:text-slate-50">Amazon</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">June 23, 2024</p>
-</div>
-<p class="font-medium text-red-500">-$42.50</p>
-</div>
-<div class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-<span class="material-symbols-outlined text-primary dark:text-primary/90">restaurant</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium text-[#0d171b] dark:text-slate-50">The Corner Cafe</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">June 22, 2024</p>
-</div>
-<p class="font-medium text-red-500">-$15.75</p>
-</div>
-<div class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-<div class="bg-green-500/10 p-3 rounded-full">
-<span class="material-symbols-outlined text-green-500">paid</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium text-[#0d171b] dark:text-slate-50">Direct Deposit</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">June 21, 2024</p>
-</div>
-<p class="font-medium text-green-500">+$2,100.00</p>
-</div>
-<div class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-<span class="material-symbols-outlined text-primary dark:text-primary/90">local_gas_station</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium text-[#0d171b] dark:text-slate-50">Shell Gas</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">June 20, 2024</p>
-</div>
-<p class="font-medium text-red-500">-$55.12</p>
-</div>
-<div class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
-<div class="bg-primary/10 dark:bg-primary/20 p-3 rounded-full">
-<span class="material-symbols-outlined text-primary dark:text-primary/90">theaters</span>
-</div>
-<div class="flex-grow">
-<p class="font-medium text-[#0d171b] dark:text-slate-50">Cinema World</p>
-<p class="text-sm text-gray-500 dark:text-gray-400">June 19, 2024</p>
-</div>
-<p class="font-medium text-red-500">-$32.00</p>
-</div>
-</div>
-</div>
-</aside>
-</main>
-</div>
-</div>
-</div>
-</div>
-</body></html>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="px-4 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col w-full max-w-md flex-1"
+          >
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 py-3"
+            >
+              <div
+                class="flex items-center gap-4 text-[#0d171b] dark:text-slate-50"
+              >
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-[#0d171b] dark:text-slate-50 text-xl font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Axiom
+                </h2>
+              </div>
+              <div class="flex items-center gap-4">
+                <div
+                  class="user-avatar-1 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                  data-alt="User avatar"
+                ></div>
+              </div>
+            </header>
+            <main class="flex-1 p-4">
+              <div class="flex flex-col gap-8">
+                <div
+                  class="bg-white dark:bg-background-dark/50 rounded-xl shadow-sm p-6 flex flex-col items-center gap-4 text-center"
+                >
+                  <a href="analysis.html" class="block cursor-pointer group">
+                    <div
+                      class="relative w-48 h-48 group-hover:scale-105 transition-transform duration-200"
+                    >
+                      <svg class="w-full h-full" viewbox="0 0 36 36">
+                        <path
+                          class="text-gray-200 dark:text-gray-700"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke-width="3"
+                        ></path>
+                        <path
+                          class="text-green-500"
+                          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                          fill="none"
+                          stroke-dasharray="75, 100"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                      <div
+                        class="absolute inset-0 flex flex-col items-center justify-center"
+                      >
+                        <span
+                          class="text-4xl font-bold text-[#0d171b] dark:text-slate-50"
+                          >750</span
+                        >
+                        <span class="text-green-500 font-medium">Good</span>
+                      </div>
+                    </div>
+                  </a>
+                  <div class="flex-1">
+                    <h3
+                      class="text-2xl font-bold text-[#0d171b] dark:text-slate-50 mb-2"
+                    >
+                      Your Credit Score is Looking Great!
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400">
+                      A high credit score opens doors to better financial
+                      products and lower interest rates.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Credit Factors Section -->
+                <div>
+                  <h3
+                    class="text-xl font-bold text-[#0d171b] dark:text-slate-50 mb-4 px-2"
+                  >
+                    Credit Factors
+                  </h3>
+                  <div class="space-y-3">
+                    <div
+                      class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-gray-500"
+                          >calendar_month</span
+                        >
+                        <p class="text-[#0d171b] dark:text-slate-50">
+                          Payment History
+                        </p>
+                      </div>
+                      <p class="font-medium text-green-500">Excellent</p>
+                    </div>
+                    <div
+                      class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <div class="flex items-center gap-3">
+                        <span
+                          class="material-symbols-outlined text-gray-500"
+                          >data_usage</span
+                        >
+                        <p class="text-[#0d171b] dark:text-slate-50">
+                          Credit Utilization
+                        </p>
+                      </div>
+                      <p class="font-medium text-yellow-500">Fair</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Top Recommendation Section -->
+                <div
+                  class="p-4 bg-primary/10 dark:bg-primary/20 rounded-xl"
+                >
+                  <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary mt-1"
+                      >lightbulb</span
+                    >
+                    <div>
+                      <h3
+                        class="font-bold text-primary dark:text-primary/90"
+                      >
+                        Top Recommendation
+                      </h3>
+                      <p
+                        class="mt-1 text-sm text-gray-700 dark:text-gray-300"
+                      >
+                        Pay down your credit card balance to improve your
+                        score by an estimated
+                        <strong class="font-bold">+15 points</strong>.
+                      </p>
+                      <a
+                        href="recommendations.html"
+                        class="text-sm font-bold text-primary dark:text-primary/90 hover:underline mt-2 inline-block"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Recent Alerts Section -->
+                <div>
+                  <h3
+                    class="text-xl font-bold text-[#0d171b] dark:text-slate-50 mb-4 px-2"
+                  >
+                    Recent Alerts
+                  </h3>
+                  <div class="flex flex-col gap-4">
+                    <div
+                      class="p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="material-symbols-outlined text-green-500 mt-1"
+                          >check_circle</span
+                        >
+                        <div>
+                          <p
+                            class="text-[#0d171b] dark:text-slate-50 text-base font-bold leading-tight"
+                          >
+                            Stable Employment History
+                          </p>
+                          <p
+                            class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1"
+                          >
+                            Your consistent job history is a positive factor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="material-symbols-outlined text-green-500 mt-1"
+                          >check_circle</span
+                        >
+                        <div>
+                          <p
+                            class="text-[#0d171b] dark:text-slate-50 text-base font-bold leading-tight"
+                          >
+                            Social Media Verified
+                          </p>
+                          <p
+                            class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1"
+                          >
+                            Connected accounts help confirm your identity.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <div class="flex items-start gap-3">
+                        <span
+                          class="material-symbols-outlined text-yellow-500 mt-1"
+                          >warning</span
+                        >
+                        <div>
+                          <p
+                            class="text-[#0d171b] dark:text-slate-50 text-base font-bold leading-tight"
+                          >
+                            New Hard Inquiry
+                          </p>
+                          <p
+                            class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1"
+                          >
+                            An inquiry was made on your report on Oct 15, 2025.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
