@@ -11,11 +11,7 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link
-      crossorigin=""
-      href="https://fonts.gstatic.com"
-      rel="preconnect"
-    />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -65,9 +61,7 @@
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.5 14.5L6 12l1.41-1.41L10.5 13.67l6.09-6.09L18 9l-7.5 7.5z"
                 ></path>
               </svg>
-              <div
-                class="flex flex-wrap justify-between gap-3 p-4 text-center"
-              >
+              <div class="flex flex-wrap justify-between gap-3 p-4 text-center">
                 <div class="flex w-full flex-col gap-3">
                   <p
                     class="text-primary dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]"
@@ -82,101 +76,35 @@
                 </div>
               </div>
             </div>
-            <div class="flex px-4 py-3">
-              <div
-                class="flex h-12 flex-1 items-center justify-center rounded-xl bg-gray-200 dark:bg-gray-700 p-1"
-              >
-                <label
-                  class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow-md has-[:checked]:text-primary text-gray-500 dark:has-[:checked]:bg-gray-900 dark:text-gray-400 dark:has-[:checked]:text-white text-sm font-medium leading-normal"
-                >
-                  <span class="truncate">Login</span>
-                  <input
-                    checked=""
-                    class="invisible w-0"
-                    name="auth_toggle"
-                    type="radio"
-                    value="Login"
-                  />
-                </label>
-                <label
-                  class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow-md has-[:checked]:text-primary text-gray-500 dark:has-[:checked]:bg-gray-900 dark:text-gray-400 dark:has-[:checked]:text-white text-sm font-medium leading-normal"
-                >
-                  <span class="truncate">Sign Up</span>
-                  <input
-                    class="invisible w-0"
-                    name="auth_toggle"
-                    type="radio"
-                    value="Sign Up"
-                  />
-                </label>
-              </div>
-            </div>
             <div class="flex flex-col gap-4 px-4 py-3">
               <label class="flex flex-col min-w-40 flex-1">
                 <p
                   class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2"
                 >
-                  Email Address
+                  Loan Application Number
                 </p>
                 <div class="flex w-full flex-1 items-stretch rounded-lg">
                   <input
                     class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-0 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder-gray-500 p-4 rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal"
-                    placeholder="Enter your email"
+                    placeholder="Enter your application number"
                     value=""
                   />
                   <div
                     class="text-gray-400 dark:text-gray-500 flex border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 items-center justify-center pr-4 rounded-r-lg border-l-0"
                   >
-                    <span class="material-symbols-outlined">mail</span>
+                    <span class="material-symbols-outlined">tag</span>
                   </div>
                 </div>
               </label>
-              <label class="flex flex-col min-w-40 flex-1">
-                <p
-                  class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal pb-2"
-                >
-                  Password
-                </p>
-                <div class="flex w-full flex-1 items-stretch rounded-lg">
-                  <input
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-800 dark:text-gray-200 focus:outline-0 focus:ring-0 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder-gray-500 p-4 rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal"
-                    placeholder="Enter your password"
-                    type="password"
-                    value=""
-                  />
-                  <div
-                    class="text-gray-400 dark:text-gray-500 flex border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 items-center justify-center pr-4 rounded-r-lg border-l-0"
-                  >
-                    <span class="material-symbols-outlined">lock</span>
-                  </div>
-                </div>
-              </label>
-              <p
-                class="text-primary dark:text-indigo-400 text-sm font-normal leading-normal pb-3 pt-1 px-1 underline cursor-pointer text-right"
-              >
-                Forgot Password?
-              </p>
             </div>
             <div class="px-4 py-3">
-              <button
-                class="flex w-full items-center justify-center rounded-lg bg-primary text-white h-14 text-base font-bold leading-normal shadow-md hover:bg-primary/90 transition-colors"
-              >
-                Login
-              </button>
-            </div>
-            <div class="px-4 py-3 flex items-center gap-4">
-              <hr class="flex-grow border-gray-300 dark:border-gray-600" />
-              <p class="text-gray-500 dark:text-gray-400 text-sm">
-                Or continue with:
-              </p>
-              <hr class="flex-grow border-gray-300 dark:border-gray-600" />
-            </div>
-            <div class="px-4 py-3 grid grid-cols-1 gap-4">
-              <button
-                class="flex items-center justify-center gap-2 rounded-lg bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 h-12 text-sm font-medium leading-normal shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-              >
-                <span>Continue with Google</span>
-              </button>
+              <a href="1st page.html" class="block">
+                <button
+                  class="flex w-full items-center justify-center rounded-lg bg-primary text-white h-14 text-base font-bold leading-normal shadow-md hover:bg-primary/90 transition-colors"
+                >
+                  Login
+                </button>
+              </a>
             </div>
             <div class="px-4 pt-6 pb-2 text-center">
               <p class="text-gray-500 dark:text-gray-400 text-xs">
@@ -201,4 +129,3 @@
     </div>
   </body>
 </html>
-

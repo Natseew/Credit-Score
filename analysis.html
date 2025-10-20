@@ -49,12 +49,8 @@
       class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
     >
       <div class="layout-container flex h-full grow flex-col">
-        <div
-          class="px-4 flex flex-1 justify-center py-5"
-        >
-          <div
-            class="layout-content-container flex flex-col max-w-md flex-1"
-          >
+        <div class="px-4 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-md flex-1">
             <!-- Page Heading -->
             <div class="flex flex-wrap justify-between gap-3 p-4">
               <div class="flex flex-col gap-3">
@@ -80,28 +76,12 @@
                 >
                   Your Axiom Score
                 </p>
-                <p class="text-6xl font-bold text-primary my-2">785</p>
+                <p class="text-6xl font-bold text-primary my-2">750</p>
                 <div class="flex items-center gap-2">
-                  <span class="text-green-accent font-medium">Excellent</span>
+                  <span class="text-green-accent font-medium">Good</span>
                   <span class="material-symbols-outlined text-green-accent"
                     >verified</span
                   >
-                </div>
-              </div>
-              <div
-                class="p-6 rounded-xl bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700 flex flex-col justify-center"
-              >
-                <h3
-                  class="text-lg font-bold mb-4 text-[#0d171b] dark:text-white"
-                >
-                  Score History
-                </h3>
-                <div class="h-48 w-full">
-                  <img
-                    class="h-full w-full object-contain"
-                    data-alt="A line graph showing a steady upward trend in credit score."
-                    src="https://quickchart.io/chart?c=%7Btype%3A%27line%27%2Cdata%3A%7Blabels%3A%5B%27Jan%27%2C%27Feb%27%2C%27Mar%27%2C%27Apr%27%2C%27May%27%2C%27Jun%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27Score%27%2Cdata%3A%5B720%2C735%2C740%2C765%2C770%2C785%5D%2Cfill%3Afalse%2CborderColor%3A%27%2328a745%27%2CborderWidth%3A3%2CpointRadius%3A0%7D%5D%7D%2Coptions%3A%7Blegend%3A%7Bdisplay%3Afalse%7D%7D%7D"
-                  />
                 </div>
               </div>
             </div>
@@ -113,251 +93,222 @@
                 Credit Factor Breakdown
               </h2>
               <div class="flex flex-col gap-4">
-                <!-- Factor Card: Payment History -->
-                <div
-                  class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700"
+                <!-- Section 1: Foundational Stability -->
+                <details
+                  class="rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 group"
+                  open
                 >
-                  <div class="flex items-center justify-between">
-                    <p
+                  <summary
+                    class="p-6 cursor-pointer flex items-center justify-between list-none"
+                  >
+                    <h3
                       class="text-lg font-bold text-[#0d171b] dark:text-white"
                     >
-                      Payment History
-                    </p>
-                    <span class="text-sm font-semibold text-green-accent"
-                      >Excellent</span
+                      Foundational Stability
+                    </h3>
+                    <span
+                      class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
+                      >expand_more</span
                     >
-                  </div>
-                  <p class="text-sm text-[#6c757d] dark:text-gray-400">
-                    On-Time Payments: 100%
-                  </p>
-                  <div class="rounded-full bg-green-accent/20 h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-green-accent"
-                      style="width: 100%"
-                    ></div>
-                  </div>
-                  <details class="group mt-2">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary"
-                    >
-                      <span>Show Details</span>
-                      <span
-                        class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
-                        >expand_more</span
-                      >
-                    </summary>
-                    <div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
-                      <p class="mb-2">
-                        You have 0 late payments across all your accounts.
+                  </summary>
+                  <div class="space-y-3 px-6 pb-6">
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        a) Employment History Length
                       </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
+                      >
                     </div>
-                  </details>
-                </div>
-                <!-- Factor Card: Credit Utilization -->
-                <div
-                  class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700"
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        b) Professional Licenses
+                      </p>
+                      <span class="font-semibold text-green-accent">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        c) Education Level
+                      </p>
+                      <span class="font-semibold text-green-accent">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        d) Loan Purpose/Financial Goal
+                      </p>
+                      <span class="font-semibold text-yellow-accent">Fair</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        e) Debt-to-Income (Inferred)
+                      </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
+                      >
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Section 2: Behavioral & Digital Body Language -->
+                <details
+                  class="rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 group"
                 >
-                  <div class="flex items-center justify-between">
-                    <p
+                  <summary
+                    class="p-6 cursor-pointer flex items-center justify-between list-none"
+                  >
+                    <h3
                       class="text-lg font-bold text-[#0d171b] dark:text-white"
                     >
-                      Credit Utilization
-                    </p>
-                    <span class="text-sm font-semibold text-green-accent"
-                      >Good</span
+                      Behavioral & Digital Body Language
+                    </h3>
+                    <span
+                      class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
+                      >expand_more</span
                     >
-                  </div>
-                  <p class="text-sm text-[#6c757d] dark:text-gray-400">
-                    Credit Card Use: 15%
-                  </p>
-                  <div class="rounded-full bg-green-accent/20 h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-green-accent"
-                      style="width: 85%"
-                    ></div>
-                  </div>
-                  <details class="group mt-2">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary"
-                    >
-                      <span>Show Details</span>
-                      <span
-                        class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
-                        >expand_more</span
-                      >
-                    </summary>
-                    <div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
-                      <p class="mb-2">
-                        Your credit utilization is low, which is a positive
-                        sign to lenders.
+                  </summary>
+                  <div class="space-y-3 px-6 pb-6">
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        a) Keystroke Velocity & Fluidity
                       </p>
+                      <span class="font-semibold text-green-accent">Good</span>
                     </div>
-                  </details>
-                </div>
-                <!-- Factor Card: Employment History -->
-                <div
-                  class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700"
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        b) Input Correction Frequency
+                      </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        c) Application Completeness
+                      </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
+                      >
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        d) Field Skipping/Incompleteness
+                      </p>
+                      <span class="font-semibold text-green-accent">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        e) Session Duration/Flow
+                      </p>
+                      <span class="font-semibold text-yellow-accent">Fair</span>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Section 3: Psychometric & Character Assessment -->
+                <details
+                  class="rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 group"
                 >
-                  <div class="flex items-center justify-between">
-                    <p
+                  <summary
+                    class="p-6 cursor-pointer flex items-center justify-between list-none"
+                  >
+                    <h3
                       class="text-lg font-bold text-[#0d171b] dark:text-white"
                     >
-                      Employment History
-                    </p>
-                    <span class="text-sm font-semibold text-green-accent"
-                      >Excellent</span
+                      Psychometric & Character Assessment
+                    </h3>
+                    <span
+                      class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
+                      >expand_more</span
                     >
-                  </div>
-                  <p class="text-sm text-[#6c757d] dark:text-gray-400">
-                    Verification: Complete
-                  </p>
-                  <div class="rounded-full bg-green-accent/20 h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-green-accent"
-                      style="width: 100%"
-                    ></div>
-                  </div>
-                  <details class="group mt-2">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary"
-                    >
-                      <span>Show Details</span>
-                      <span
-                        class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
-                        >expand_more</span
-                      >
-                    </summary>
-                    <div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
-                      <p class="mb-2">
-                        Your stable employment history is a strong positive
-                        indicator.
+                  </summary>
+                  <div class="space-y-3 px-6 pb-6">
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        a) Attitude to Default
                       </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
+                      >
                     </div>
-                  </details>
-                </div>
-                <!-- Factor Card: Educational Attainment -->
-                <div
-                  class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700"
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        b) Risk Aversion Score
+                      </p>
+                      <span class="font-semibold text-green-accent">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        c) Discipline/Impulsivity Score
+                      </p>
+                      <span class="font-semibold text-green-accent">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        d) Consistency in Test Responses
+                      </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
+                      >
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Section 4: Metadata & Cross-Check Consistency -->
+                <details
+                  class="rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-200 dark:border-gray-700 group"
                 >
-                  <div class="flex items-center justify-between">
-                    <p
+                  <summary
+                    class="p-6 cursor-pointer flex items-center justify-between list-none"
+                  >
+                    <h3
                       class="text-lg font-bold text-[#0d171b] dark:text-white"
                     >
-                      Educational Attainment
-                    </p>
-                    <span class="text-sm font-semibold text-green-accent"
-                      >Good</span
+                      Metadata & Cross-Check Consistency
+                    </h3>
+                    <span
+                      class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
+                      >expand_more</span
                     >
-                  </div>
-                  <p class="text-sm text-[#6c757d] dark:text-gray-400">
-                    Level: Verified
-                  </p>
-                  <div class="rounded-full bg-green-accent/20 h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-green-accent"
-                      style="width: 80%"
-                    ></div>
-                  </div>
-                  <details class="group mt-2">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary"
-                    >
-                      <span>Show Details</span>
-                      <span
-                        class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
-                        >expand_more</span
-                      >
-                    </summary>
-                    <div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
-                      <p class="mb-2">
-                        Your educational background contributes positively to
-                        your profile.
+                  </summary>
+                  <div class="space-y-3 px-6 pb-6">
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        a) Digital Footprint Device Type
                       </p>
-                    </div>
-                  </details>
-                </div>
-                <!-- Factor Card: Social Media Score -->
-                <div
-                  class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700"
-                >
-                  <div class="flex items-center justify-between">
-                    <p
-                      class="text-lg font-bold text-[#0d171b] dark:text-white"
-                    >
-                      Social Media Score
-                    </p>
-                    <span class="text-sm font-semibold text-green-accent"
-                      >Good</span
-                    >
-                  </div>
-                  <p class="text-sm text-[#6c757d] dark:text-gray-400">
-                    Consistency: High
-                  </p>
-                  <div class="rounded-full bg-green-accent/20 h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-green-accent"
-                      style="width: 85%"
-                    ></div>
-                  </div>
-                  <details class="group mt-2">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary"
-                    >
-                      <span>Show Details</span>
-                      <span
-                        class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
-                        >expand_more</span
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
                       >
-                    </summary>
-                    <div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
-                      <p class="mb-2">
-                        A consistent and verifiable social media presence helps
-                        strengthen your identity verification.
-                      </p>
                     </div>
-                  </details>
-                </div>
-                 <!-- Factor Card: Phone Metadata Analysis -->
-                <div
-                  class="flex flex-col gap-3 rounded-xl p-6 bg-background-light dark:bg-background-dark shadow-md border border-gray-200 dark:border-gray-700"
-                >
-                  <div class="flex items-center justify-between">
-                    <p
-                      class="text-lg font-bold text-[#0d171b] dark:text-white"
-                    >
-                      Phone Metadata Analysis
-                    </p>
-                    <span class="text-sm font-semibold text-green-accent"
-                      >Good</span
-                    >
-                  </div>
-                  <p class="text-sm text-[#6c757d] dark:text-gray-400">
-                    Analysis: Complete
-                  </p>
-                  <div class="rounded-full bg-green-accent/20 h-2.5">
-                    <div
-                      class="h-2.5 rounded-full bg-green-accent"
-                      style="width: 90%"
-                    ></div>
-                  </div>
-                  <details class="group mt-2">
-                    <summary
-                      class="flex cursor-pointer items-center justify-between text-sm font-medium text-primary"
-                    >
-                      <span>Show Details</span>
-                      <span
-                        class="material-symbols-outlined transition-transform duration-200 group-open:rotate-180"
-                        >expand_more</span
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        b) App Ecosystem Balance
+                      </p>
+                      <span class="font-semibold text-green-accent">Good</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        c) Data Consistency Check
+                      </p>
+                      <span class="font-semibold text-green-accent"
+                        >Excellent</span
                       >
-                    </summary>
-                    <div class="pt-2 text-sm text-[#6c757d] dark:text-gray-400">
-                      <p class="mb-2">
-                        Your device usage patterns and app history are
-                        consistent and contribute positively to your risk
-                        profile.
-                      </p>
                     </div>
-                  </details>
+                    <div class="flex items-center justify-between">
+                      <p class="text-gray-600 dark:text-gray-300">
+                        d) Cross-Referenced Inconsistencies
+                      </p>
+                      <span class="font-semibold text-yellow-accent">Fair</span>
+                    </div>
+                  </div>
+                </details>
+
+                <div class="pt-4 mt-4">
+                  <a
+                    href="dashboard.html"
+                    class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary/20 text-primary font-bold hover:bg-primary/30 transition-colors"
+                  >
+                    <span>Back to Dashboard</span>
+                  </a>
                 </div>
               </div>
             </div>

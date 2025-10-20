@@ -20,17 +20,20 @@
         theme: {
           extend: {
             colors: {
-              primary: "#1193d4",
-              "background-light": "#f6f7f8",
+              primary: "#007bff",
+              "background-light": "#f8f9fa",
               "background-dark": "#101c22",
+              "green-accent": "#28a745",
+              "yellow-accent": "#ffc107",
+              "red-accent": "#dc3545",
             },
             fontFamily: {
               display: ["Inter", "sans-serif"],
             },
             borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
               full: "9999px",
             },
           },
@@ -40,254 +43,151 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
-    <div
-      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
-    >
-      <div class="layout-container flex h-full grow flex-col">
-        <header
-          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-background-dark"
-        >
-          <div
-            class="flex items-center gap-4 text-gray-900 dark:text-white"
-          >
-            <div class="size-6 text-primary">
-              <svg
-                fill="currentColor"
-                viewbox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-              <path
-                d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
-                fill="currentColor"
-              ></path>
-              </svg>
-            </div>
-            <h2 class="text-lg font-bold">Axiom</h2>
-          </div>
-          <div class="flex items-center gap-4">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide"
+    <div class="flex flex-col min-h-screen">
+      <!-- Header -->
+      <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 py-3"
             >
-              <span class="truncate">Refresh</span>
-            </button>
-            <div
-              class="user-avatar-4 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              data-alt="User avatar"
-            ></div>
-          </div>
-        </header>
-        <main class="flex-1 px-4 py-8">
-          <div class="max-w-md mx-auto">
-            <div class="flex flex-col gap-3 p-4">
-              <p
-                class="text-gray-900 dark:text-white text-3xl font-black leading-tight tracking-tight"
-              >
-                Personalized Recommendations
-              </p>
               <div
-                class="flex flex-col gap-2 rounded-xl p-6 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900"
+                class="flex items-center gap-4 text-[#0d171b] dark:text-slate-50"
               >
-                <p
-                  class="text-gray-600 dark:text-gray-400 text-base font-medium"
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-[#0d171b] dark:text-slate-50 text-xl font-bold leading-tight tracking-[-0.015em]"
                 >
-                  Current Credit Score
-                </p>
-                <p
-                  class="text-gray-900 dark:text-white tracking-light text-4xl font-bold"
-                >
-                  720
-                </p>
-                <p class="text-green-500 text-base font-medium">
-                  +15 points this month
-                </p>
+                  Axiom
+                </h2>
               </div>
+              <div class="flex items-center gap-4">
+                <a href="settings.html" class="block">
+                <div
+                  class="user-avatar-1 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                  data-alt="User avatar"
+                ></div>
+                </a>
+              </div>
+            </header>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-4">
+        <div class="max-w-md mx-auto">
+          <div class="flex flex-col gap-3 mb-6">
+            <h1
+              class="text-3xl font-black text-gray-900 dark:text-white leading-tight tracking-tight"
+            >
+              Recommendations
+            </h1>
+            <div
+              class="flex flex-col gap-2 rounded-xl p-6 border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800"
+            >
+              <p
+                class="text-gray-600 dark:text-gray-400 text-base font-medium"
+              >
+                Current Axiom Score
+              </p>
+              <p
+                class="text-primary tracking-light text-4xl font-bold"
+              >
+                750
+              </p>
             </div>
+          </div>
+
+          <div class="mb-8">
             <h2
-              class="text-gray-900 dark:text-white text-xl font-bold tracking-tight px-4 pb-3 pt-8"
+              class="text-gray-900 dark:text-white text-xl font-bold tracking-tight pb-3"
             >
               Key Factors
             </h2>
-            <div class="flex flex-col gap-6 p-4">
+            <div class="flex flex-col gap-4">
               <div
-                class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 flex-col"
+                class="flex flex-1 gap-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 flex-col"
               >
-                <div class="flex items-center gap-4">
-                  <span
-                    class="material-symbols-outlined text-yellow-500 text-3xl"
-                    >pie_chart</span
-                  >
-                  <h2
-                    class="text-gray-900 dark:text-white text-lg font-bold"
-                  >
-                    Credit Utilization
-                  </h2>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-3xl">foundation</span>
+                    <h3 class="text-gray-900 dark:text-white text-lg font-bold">
+                    Foundational Stability
+                    </h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                  Your credit utilization is 35%. Lowering it can improve your
-                  score.
+                  Based on your employment, education, and financial goals.
                 </p>
-                <div
-                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2"
-                >
-                  <div
-                    class="bg-yellow-500 h-2.5 rounded-full"
-                    style="width: 35%"
-                  ></div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                    <div class="bg-green-accent h-2.5 rounded-full" style="width: 90%"></div>
                 </div>
-                <p class="text-yellow-500 text-sm font-medium mt-1">
-                  Needs Improvement
-                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Keep it up! Your foundational data is strong and verified.</p>
               </div>
               <div
-                class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 flex-col"
+                class="flex flex-1 gap-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 flex-col"
               >
-                <div class="flex items-center gap-4">
-                  <span
-                    class="material-symbols-outlined text-green-500 text-3xl"
-                    >event_available</span
-                  >
-                  <h2
-                    class="text-gray-900 dark:text-white text-lg font-bold"
-                  >
-                    Payment History
-                  </h2>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-3xl">fingerprint</span>
+                    <h3 class="text-gray-900 dark:text-white text-lg font-bold">
+                    Behavioral & Digital Body Language
+                    </h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                  You have 100% on-time payments. Keep it up!
+                  Analyzes how you interact with the application.
                 </p>
-                <div
-                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2"
-                >
-                  <div
-                    class="bg-green-500 h-2.5 rounded-full"
-                    style="width: 100%"
-                  ></div>
+                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                    <div class="bg-green-accent h-2.5 rounded-full" style="width: 80%"></div>
                 </div>
-                <p class="text-green-500 text-sm font-medium mt-1">
-                  Excellent
-                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Great job. Your interaction with the app is smooth and consistent.</p>
               </div>
-              <div
-                class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 flex-col"
+               <div
+                class="flex flex-1 gap-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 flex-col"
               >
-                <div class="flex items-center gap-4">
-                  <span
-                    class="material-symbols-outlined text-green-500 text-3xl"
-                    >groups</span
-                  >
-                  <h2
-                    class="text-gray-900 dark:text-white text-lg font-bold"
-                  >
-                    Social Media Check
-                  </h2>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+                    <h3 class="text-gray-900 dark:text-white text-lg font-bold">
+                    Psychometric & Character Assessment
+                    </h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                  Your social media presence appears consistent and verifiable.
+                  Evaluates financial behavior based on your questionnaire responses.
                 </p>
-                <div
-                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2"
-                >
-                  <div
-                    class="bg-green-500 h-2.5 rounded-full"
-                    style="width: 80%"
-                  ></div>
+                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                    <div class="bg-green-accent h-2.5 rounded-full" style="width: 75%"></div>
                 </div>
-                <p class="text-green-500 text-sm font-medium mt-1">Good</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Your responses show a responsible financial attitude.</p>
               </div>
-              <div
-                class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 flex-col"
+               <div
+                class="flex flex-1 gap-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 flex-col"
               >
-                <div class="flex items-center gap-4">
-                  <span
-                    class="material-symbols-outlined text-green-500 text-3xl"
-                    >work</span
-                  >
-                  <h2
-                    class="text-gray-900 dark:text-white text-lg font-bold"
-                  >
-                    Employment Background
-                  </h2>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-3xl">sync</span>
+                    <h3 class="text-gray-900 dark:text-white text-lg font-bold">
+                    Metadata & Cross-Check Consistency
+                    </h3>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                  Your employment history is stable and verified.
+                  Verifies consistency across your digital footprint and submitted data.
                 </p>
-                <div
-                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2"
-                >
-                  <div
-                    class="bg-green-500 h-2.5 rounded-full"
-                    style="width: 100%"
-                  ></div>
+                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                    <div class="bg-yellow-accent h-2.5 rounded-full" style="width: 50%"></div>
                 </div>
-                <p class="text-green-500 text-sm font-medium mt-1">
-                  Excellent
-                </p>
-              </div>
-            </div>
-            <h2
-              class="text-gray-900 dark:text-white text-xl font-bold tracking-tight px-4 pb-3 pt-8"
-            >
-              Actionable Recommendations
-            </h2>
-            <div class="space-y-4 p-4">
-              <div
-                class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800"
-              >
-                <h3
-                  class="text-lg font-bold text-gray-900 dark:text-white"
-                >
-                  Pay down your credit card balance
-                </h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                  Aim to get your balance below 30% of your credit limit for
-                  a quick score boost.
-                </p>
-                <a
-                  class="text-primary font-semibold text-sm hover:underline mt-2 inline-block"
-                  href="#"
-                  >Learn More</a
-                >
-              </div>
-              <div
-                class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800"
-              >
-                <h3
-                  class="text-lg font-bold text-gray-900 dark:text-white"
-                >
-                  Dispute an inaccuracy on your report
-                </h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                  We found a potential error that could be impacting your
-                  score negatively.
-                </p>
-                <a
-                  class="text-primary font-semibold text-sm hover:underline mt-2 inline-block"
-                  href="#"
-                  >See Details</a
-                >
-              </div>
-              <div
-                class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800"
-              >
-                <h3
-                  class="text-lg font-bold text-gray-900 dark:text-white"
-                >
-                  Consider a credit-builder loan
-                </h3>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">
-                  This can help improve your credit mix and payment history
-                  over time.
-                </p>
-                <a
-                  class="text-primary font-semibold text-sm hover:underline mt-2 inline-block"
-                  href="#"
-                  >Explore Options</a
-                >
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">There are minor inconsistencies in your data. Reviewing your submitted information can improve this factor.</p>
               </div>
             </div>
           </div>
-        </main>
-      </div>
+           <div class="pt-4 mt-4">
+              <a href="dashboard.html" class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary/20 text-primary font-bold hover:bg-primary/30 transition-colors">
+                  <span>Back to Dashboard</span>
+              </a>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>

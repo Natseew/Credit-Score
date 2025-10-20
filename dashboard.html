@@ -20,9 +20,12 @@
         theme: {
           extend: {
             colors: {
-              primary: "#1193d4",
-              "background-light": "#f6f7f8",
+              primary: "#007bff",
+              "background-light": "#f8f9fa",
               "background-dark": "#101c22",
+              "green-accent": "#28a745",
+              "yellow-accent": "#ffc107",
+              "red-accent": "#dc3545",
             },
             fontFamily: {
               display: ["Inter", "sans-serif"],
@@ -75,10 +78,12 @@
                 </h2>
               </div>
               <div class="flex items-center gap-4">
+                <a href="settings.html" class="block">
                 <div
                   class="user-avatar-1 bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
                   data-alt="User avatar"
                 ></div>
+                </a>
               </div>
             </header>
             <main class="flex-1 p-4">
@@ -109,11 +114,18 @@
                       <div
                         class="absolute inset-0 flex flex-col items-center justify-center"
                       >
-                        <span
-                          class="text-4xl font-bold text-[#0d171b] dark:text-slate-50"
-                          >750</span
-                        >
-                        <span class="text-green-500 font-medium">Good</span>
+                        <p
+                  class="text-base font-medium text-[#6c757d] dark:text-gray-400"
+                >
+                  Your Axiom Score
+                </p>
+                <p class="text-6xl font-bold text-primary my-2">750</p>
+                <div class="flex items-center gap-2">
+                  <span class="text-green-accent font-medium">Good</span>
+                  <span class="material-symbols-outlined text-green-accent"
+                    >verified</span
+                  >
+                </div>
                       </div>
                     </div>
                   </a>
@@ -141,29 +153,33 @@
                     <div
                       class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
                     >
-                      <div class="flex items-center gap-3">
-                        <span
-                          class="material-symbols-outlined text-gray-500"
-                          >calendar_month</span
-                        >
-                        <p class="text-[#0d171b] dark:text-slate-50">
-                          Payment History
-                        </p>
-                      </div>
+                      <p class="text-[#0d171b] dark:text-slate-50">
+                        Foundational Stability
+                      </p>
                       <p class="font-medium text-green-500">Excellent</p>
                     </div>
                     <div
                       class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
                     >
-                      <div class="flex items-center gap-3">
-                        <span
-                          class="material-symbols-outlined text-gray-500"
-                          >data_usage</span
-                        >
-                        <p class="text-[#0d171b] dark:text-slate-50">
-                          Credit Utilization
-                        </p>
-                      </div>
+                      <p class="text-[#0d171b] dark:text-slate-50">
+                        Behavioral & Digital Body Language
+                      </p>
+                      <p class="font-medium text-green-500">Good</p>
+                    </div>
+                     <div
+                      class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <p class="text-[#0d171b] dark:text-slate-50">
+                        Psychometric & Character Assessment
+                      </p>
+                      <p class="font-medium text-green-500">Good</p>
+                    </div>
+                     <div
+                      class="flex items-center justify-between p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
+                    >
+                      <p class="text-[#0d171b] dark:text-slate-50">
+                        Metadata & Cross-Check Consistency
+                      </p>
                       <p class="font-medium text-yellow-500">Fair</p>
                     </div>
                   </div>
@@ -186,92 +202,13 @@
                       <p
                         class="mt-1 text-sm text-gray-700 dark:text-gray-300"
                       >
-                        Pay down your credit card balance to improve your
-                        score by an estimated
-                        <strong class="font-bold">+15 points</strong>.
+                        Resolve inconsistencies in your submitted data to improve your score.
                       </p>
                       <a
                         href="recommendations.html"
                         class="text-sm font-bold text-primary dark:text-primary/90 hover:underline mt-2 inline-block"
                         >Learn More</a
                       >
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Recent Alerts Section -->
-                <div>
-                  <h3
-                    class="text-xl font-bold text-[#0d171b] dark:text-slate-50 mb-4 px-2"
-                  >
-                    Recent Alerts
-                  </h3>
-                  <div class="flex flex-col gap-4">
-                    <div
-                      class="p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
-                    >
-                      <div class="flex items-start gap-3">
-                        <span
-                          class="material-symbols-outlined text-green-500 mt-1"
-                          >check_circle</span
-                        >
-                        <div>
-                          <p
-                            class="text-[#0d171b] dark:text-slate-50 text-base font-bold leading-tight"
-                          >
-                            Stable Employment History
-                          </p>
-                          <p
-                            class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1"
-                          >
-                            Your consistent job history is a positive factor.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
-                    >
-                      <div class="flex items-start gap-3">
-                        <span
-                          class="material-symbols-outlined text-green-500 mt-1"
-                          >check_circle</span
-                        >
-                        <div>
-                          <p
-                            class="text-[#0d171b] dark:text-slate-50 text-base font-bold leading-tight"
-                          >
-                            Social Media Verified
-                          </p>
-                          <p
-                            class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1"
-                          >
-                            Connected accounts help confirm your identity.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="p-4 bg-white dark:bg-background-dark/50 rounded-xl shadow-sm"
-                    >
-                      <div class="flex items-start gap-3">
-                        <span
-                          class="material-symbols-outlined text-yellow-500 mt-1"
-                          >warning</span
-                        >
-                        <div>
-                          <p
-                            class="text-[#0d171b] dark:text-slate-50 text-base font-bold leading-tight"
-                          >
-                            New Hard Inquiry
-                          </p>
-                          <p
-                            class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal mt-1"
-                          >
-                            An inquiry was made on your report on Oct 15, 2025.
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

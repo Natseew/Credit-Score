@@ -172,13 +172,20 @@
                     accounts.
                   </p>
                 </label>
-                <div class="pt-4">
+                <div class="pt-4 flex items-center gap-4">
                   <button
                     id="open-link-modal"
-                    class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                    class="flex-1 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary/20 text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors"
                   >
-                    <span class="truncate">Link Your Accounts</span>
+                    <span class="truncate">Link Accounts</span>
                   </button>
+                  <a href="2nd page.html" class="flex-1">
+                    <button
+                      class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+                    >
+                      <span class="truncate">Continue</span>
+                    </button>
+                  </a>
                 </div>
               </div>
             </main>
@@ -221,8 +228,8 @@
           </div>
         </div>
         <div class="flex-grow overflow-y-auto space-y-2" id="bank-list">
-          <!-- Bank List -->
           <button
+            id="dbs-button"
             class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
           >
             <img
@@ -282,60 +289,42 @@
               >HSBC</span
             >
           </button>
-          <button
-            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
-          >
-            <img
-              src="https://placehold.co/40x40/007882/FFFFFF?text=SC"
-              alt="Standard Chartered logo"
-              class="h-10 w-10 rounded-full"
-            />
-            <span class="font-medium text-gray-800 dark:text-gray-200"
-              >Standard Chartered</span
-            >
-          </button>
-          <button
-            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
-          >
-            <img
-              src="https://placehold.co/40x40/FFC72C/000000?text=MB"
-              alt="Maybank logo"
-              class="h-10 w-10 rounded-full"
-            />
-            <span class="font-medium text-gray-800 dark:text-gray-200"
-              >Maybank</span
-            >
-          </button>
-          <button
-            class="w-full flex items-center gap-4 p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-left"
-          >
-            <img
-              src="https://placehold.co/40x40/8B0000/FFFFFF?text=CIMB"
-              alt="CIMB Bank logo"
-              class="h-10 w-10 rounded-full"
-            />
-            <span class="font-medium text-gray-800 dark:text-gray-200"
-              >CIMB Bank</span
-            >
-          </button>
         </div>
       </div>
     </div>
     
-    <!-- Success Modal -->
-    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-sm p-8 text-center">
-            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success/20 text-success mb-4">
-                <span class="material-symbols-outlined text-4xl">check_circle</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">Account Linked Successfully!</h3>
-            <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">Your financial account has been securely linked to your Axiom profile.</p>
-            <button id="continue-button" class="w-full rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
-                Continue
-            </button>
-        </div>
+    <!-- DBS Popup Modal -->
+    <div id="dbs-popup-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 hidden">
+        <img id="dbs-image" src="dbs popup.jpg" alt="DBS Login Popup" class="max-w-full max-h-full rounded-lg cursor-pointer" />
     </div>
 
+    <!-- Success Modal -->
+    <div
+      id="success-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-sm p-8 text-center"
+      >
+        <div
+          class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success/20 text-success mb-4"
+        >
+          <span class="material-symbols-outlined text-4xl">check_circle</span>
+        </div>
+        <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">
+          Account Linked Successfully!
+        </h3>
+        <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">
+          Your financial account has been securely linked to your Axiom profile.
+        </p>
+        <button
+          id="continue-button"
+          class="w-full rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -343,9 +332,14 @@
           "link-accounts-modal"
         );
         const successModal = document.getElementById("success-modal");
+        const dbsPopupModal = document.getElementById("dbs-popup-modal");
+        
         const openModalBtn = document.getElementById("open-link-modal");
         const closeModalBtn = document.getElementById("close-link-modal");
-        const bankButtons = document.querySelectorAll("#bank-list button");
+        
+        const dbsButton = document.getElementById("dbs-button");
+        const otherBankButtons = document.querySelectorAll("#bank-list button:not(#dbs-button)");
+        const dbsImage = document.getElementById("dbs-image");
         const continueButton = document.getElementById("continue-button");
 
         const openLinkModal = () => {
@@ -355,32 +349,56 @@
         const closeLinkModal = () => {
           if (linkAccountsModal) linkAccountsModal.classList.add("hidden");
         };
-        
+
         const openSuccessModal = () => {
-            if(successModal) successModal.classList.remove("hidden");
+          if (successModal) successModal.classList.remove("hidden");
+        };
+
+        const closeSuccessModal = () => {
+          if (successModal) successModal.classList.add("hidden");
+        };
+        
+        const openDbsModal = () => {
+            if(dbsPopupModal) dbsPopupModal.classList.remove("hidden");
         }
         
-        const closeSuccessModal = () => {
-            if(successModal) successModal.classList.add("hidden");
+        const closeDbsModal = () => {
+            if(dbsPopupModal) dbsPopupModal.classList.add("hidden");
         }
 
         if (openModalBtn) openModalBtn.addEventListener("click", openLinkModal);
         if (closeModalBtn) closeModalBtn.addEventListener("click", closeLinkModal);
 
-        bankButtons.forEach(button => {
-            button.addEventListener("click", () => {
+        // Specific flow for DBS button
+        if(dbsButton) {
+            dbsButton.addEventListener("click", () => {
                 closeLinkModal();
-                openSuccessModal();
-            });
-        });
-        
-        if (continueButton) {
-            continueButton.addEventListener("click", () => {
-                // You can change this to navigate to the next page, e.g., '2nd page.html'
-                closeSuccessModal();
+                openDbsModal();
             });
         }
 
+        // Flow for all other bank buttons
+        otherBankButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            closeLinkModal();
+            openSuccessModal();
+          });
+        });
+        
+        // Flow for clicking the DBS image
+        if(dbsImage) {
+            dbsImage.addEventListener("click", () => {
+                closeDbsModal();
+                openSuccessModal();
+            });
+        }
+
+        if (continueButton) {
+          continueButton.addEventListener("click", () => {
+            // This can navigate to the next page, e.g., '2nd page.html'
+            closeSuccessModal();
+          });
+        }
 
         if (linkAccountsModal) {
           linkAccountsModal.addEventListener("click", (event) => {
@@ -398,8 +416,11 @@
             ) {
               closeLinkModal();
             }
-            if(successModal && !successModal.classList.contains("hidden")) {
-                closeSuccessModal();
+            if (successModal && !successModal.classList.contains("hidden")) {
+              closeSuccessModal();
+            }
+            if(dbsPopupModal && !dbsPopupModal.classList.contains("hidden")) {
+                closeDbsModal();
             }
           }
         });

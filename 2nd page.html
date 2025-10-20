@@ -14,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <!-- Font Awesome for social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -23,6 +28,7 @@
               primary: "#1193d4",
               "background-light": "#f6f7f8",
               "background-dark": "#101c22",
+              success: "#28a745",
             },
             fontFamily: {
               display: ["Inter", "sans-serif"],
@@ -80,97 +86,99 @@
                 <span class="truncate">Help</span>
               </button>
             </header>
-            <main class="flex flex-col flex-1 gap-8 p-4 md:p-6">
-              <div class="flex flex-col gap-3">
-                <div class="flex gap-6 justify-between">
-                  <p
-                    class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal"
-                  >
-                    Step 2 of 4
-                  </p>
+            <main
+              class="flex flex-col flex-1 justify-between gap-8 p-4 md:p-6"
+            >
+              <div>
+                <div class="flex flex-col gap-3">
+                  <div class="flex gap-6 justify-between">
+                    <p
+                      class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal"
+                    >
+                      Step 2 of 4
+                    </p>
+                  </div>
+                  <div class="rounded bg-[#cfdfe7] dark:bg-gray-700">
+                    <div
+                      class="h-2 rounded bg-primary"
+                      style="width: 50%"
+                    ></div>
+                  </div>
                 </div>
-                <div class="rounded bg-[#cfdfe7] dark:bg-gray-700">
-                  <div class="h-2 rounded bg-primary" style="width: 50%"></div>
+                <div class="flex flex-wrap justify-between gap-3 mt-8">
+                  <div class="flex w-full flex-col gap-3">
+                    <p
+                      class="text-3xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white"
+                    >
+                      Foundational Stability
+                    </p>
+                    <p
+                      class="text-[#4c809a] dark:text-gray-400 text-base font-normal leading-normal"
+                    >
+                      Verification of self-reported economic capacity.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4 mt-8">
+                  <button
+                    id="open-employment-modal"
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Employment History
+                    </h2>
+                  </button>
+                  <button
+                    id="open-social-modal"
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Connect Social Accounts
+                    </h2>
+                  </button>
+                  <div
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Education Level
+                    </h2>
+                  </div>
+                  <div
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Loan Purpose/Financial Goal
+                    </h2>
+                  </div>
+                  <button
+                    id="open-questionnaire-modal"
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  >
+                    <h2
+                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
+                    >
+                      Psychometric Questionnaire
+                    </h2>
+                  </button>
                 </div>
               </div>
-              <div class="flex flex-wrap justify-between gap-3">
-                <div class="flex min-w-72 flex-col gap-3">
-                  <p
-                    class="text-4xl font-black leading-tight tracking-[-0.033em] text-[#343A40] dark:text-white"
-                  >
-                    Foundational Stability
-                  </p>
-                  <p
-                    class="text-[#4c809a] dark:text-gray-400 text-base font-normal leading-normal"
-                  >
-                    Verification of self-reported economic capacity. Please
-                    upload below.
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-4">
-                <button
-                  id="open-employment-modal"
-                  class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark transition-colors"
-                >
-                  <h2
-                    class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
-                  >
-                    Employment History
-                  </h2>
-                </button>
-                <div
-                  class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center"
-                >
-                  <h2
-                    class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
-                  >
-                    Licenses/Certifications
-                  </h2>
-                </div>
-                <div
-                  class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center"
-                >
-                  <h2
-                    class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
-                  >
-                    Education Level
-                  </h2>
-                </div>
-                <div
-                  class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center"
-                >
-                  <h2
-                    class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
-                  >
-                    Financial Goal
-                  </h2>
-                </div>
-              </div>
-              <div class="flex-1"></div>
-              <div class="px-4">
-                <label class="flex gap-x-3 py-3 flex-row items-center">
-                  <input
-                    checked=""
-                    class="custom-checkbox h-5 w-5 rounded border-[#cfdfe7] dark:border-gray-600 border-2 bg-transparent text-primary checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 focus:border-primary/50"
-                    type="checkbox"
-                  />
-                  <p
-                    class="text-[#343A40] dark:text-gray-300 text-base font-normal leading-normal"
-                  >
-                    I allow to use this data for credit score rating.
-                  </p>
-                </label>
-              </div>
+
               <div class="pt-4">
-                <button
-                  class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
-                >
-                  <span class="truncate">Continue</span>
-                  <span class="material-symbols-outlined ml-2"
-                    >arrow_forward</span
+                <a href="3rd page.html" class="block">
+                  <button
+                    class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
                   >
-                </button>
+                    <span class="truncate">Continue</span>
+                  </button>
+                </a>
               </div>
             </main>
           </div>
@@ -178,12 +186,14 @@
       </div>
     </div>
 
+    <!-- Modals -->
+    <!-- Employment Modal -->
     <div
       id="employment-modal"
       class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
     >
       <div
-        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-2xl p-6 md:p-8 relative z-50 max-h-[90vh] overflow-y-auto"
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] overflow-y-auto"
       >
         <button
           id="close-employment-modal"
@@ -191,11 +201,9 @@
         >
           <span class="material-symbols-outlined">close</span>
         </button>
-
         <h3 class="text-2xl font-bold mb-6 text-[#343A40] dark:text-white">
           Employment History
         </h3>
-
         <div class="space-y-6">
           <div>
             <label
@@ -204,8 +212,7 @@
               >Upload Supporting Documents</label
             >
             <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-3">
-              Attach files like letters of employment, pay stubs, or
-              contracts.
+              E.g., letters of employment, pay stubs.
             </p>
             <input
               id="employment-file"
@@ -214,133 +221,507 @@
               class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary/20 file:text-primary hover:file:bg-primary/30 file:cursor-pointer"
             />
           </div>
-
-          <div>
-            <h4
-              class="text-lg font-semibold text-[#343A40] dark:text-white mb-4"
+          <div
+            class="flex justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700"
+          >
+            <button
+              class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold"
             >
-              Previous Employers
-            </h4>
-
-            <div class="space-y-4">
-              <div
-                class="p-4 border border-[#cfdfe7] dark:border-gray-700 rounded-lg space-y-4"
-              >
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label
-                      for="employer-name-1"
-                      class="block text-sm font-medium text-[#4c809a] dark:text-gray-400"
-                      >Employer Name</label
-                    >
-                    <input
-                      type="text"
-                      id="employer-name-1"
-                      placeholder="e.g., Razer Inc."
-                      class="mt-1 block w-full rounded-lg border-[#cfdfe7] dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary text-sm"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      for="job-title-1"
-                      class="block text-sm font-medium text-[#4c809a] dark:text-gray-400"
-                      >Job Title</label
-                    >
-                    <input
-                      type="text"
-                      id="job-title-1"
-                      placeholder="e.g., Product Manager Intern"
-                      class="mt-1 block w-full rounded-lg border-[#cfdfe7] dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary text-sm"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    for="employment-dates-1"
-                    class="block text-sm font-medium text-[#4c809a] dark:text-gray-400"
-                    >Dates of Employment</label
-                  >
-                  <input
-                    type="text"
-                    id="employment-dates-1"
-                    placeholder="e.g., Jan 2024 - Present"
-                    class="mt-1 block w-full rounded-lg border-[#cfdfe7] dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary text-sm"
-                  />
-                </div>
-              </div>
-
-              <button
-                class="w-full text-sm font-medium text-primary hover:bg-primary/10 dark:hover:bg-primary/20 py-2 rounded-lg transition-colors border-2 border-dashed border-primary/50 hover:border-primary"
-              >
-                + Add Another Employer
-              </button>
-            </div>
+              <span class="truncate">Save & Close</span>
+            </button>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div
-          class="flex justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700"
+    <!-- Social Media Modal -->
+    <div
+      id="social-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          id="close-social-modal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"
         >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">
+          Connect Social Accounts
+        </h3>
+        <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">
+          Log in for further verification.
+        </p>
+        <div class="space-y-3">
           <button
-            id="save-employment-data"
-            class="flex min-w-[120px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#0077B5] text-white font-bold hover:bg-[#005E90]"
           >
-            <span class="truncate">Save & Continue</span>
+            <i class="fa-brands fa-linkedin-in text-xl"></i>
+            <span>Connect with LinkedIn</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-black text-white font-bold hover:bg-gray-800"
+          >
+            <i class="fa-brands fa-x-twitter text-xl"></i>
+            <span>Connect with X</span>
+          </button>
+          <button
+            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#E1306C] text-white font-bold hover:bg-[#c91c58]"
+          >
+            <i class="fa-brands fa-instagram text-xl"></i>
+            <span>Connect with Instagram</span>
           </button>
         </div>
       </div>
     </div>
+
+    <!-- Psychometric Questionnaire Modal -->
+    <div
+      id="questionnaire-modal"
+      class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 relative z-50 max-h-[90vh] flex flex-col"
+      >
+        <button
+          id="close-questionnaire-modal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <h3 class="text-2xl font-bold mb-4 text-[#343A40] dark:text-white">
+          Financial Behavior
+        </h3>
+        <div class="overflow-x-auto flex-grow">
+          <table class="w-full text-sm text-left">
+            <thead
+              class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700"
+            >
+              <tr>
+                <th scope="col" class="px-2 py-3">Statement</th>
+                <th
+                  scope="col"
+                  class="px-2 py-3 text-center"
+                  title="Strongly Disagree"
+                >
+                  1
+                </th>
+                <th
+                  scope="col"
+                  class="px-2 py-3 text-center"
+                  title="Disagree"
+                >
+                  2
+                </th>
+                <th scope="col" class="px-2 py-3 text-center" title="Neutral">
+                  3
+                </th>
+                <th scope="col" class="px-2 py-3 text-center" title="Agree">
+                  4
+                </th>
+                <th
+                  scope="col"
+                  class="px-2 py-3 text-center"
+                  title="Strongly Agree"
+                >
+                  5
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-600 dark:text-gray-300">
+              <tr class="border-b dark:border-gray-700">
+                <td class="px-2 py-4">
+                  I rarely worry about having enough money for the future.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q1"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q1"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q1"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q1"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q1"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+              <tr class="border-b dark:border-gray-700">
+                <td class="px-2 py-4">
+                  I enjoy planning my monthly budget and tracking all expenses.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q2"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q2"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q2"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q2"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q2"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+              <tr class="border-b dark:border-gray-700">
+                <td class="px-2 py-4">
+                  If I see something I want, I buy it even if I don't have the
+                  cash on hand.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q3"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q3"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q3"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q3"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q3"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+              <tr class="border-b dark:border-gray-700">
+                <td class="px-2 py-4">
+                  It is acceptable to miss a small payment if I have a more
+                  urgent expense.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q4"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q4"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q4"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q4"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q4"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+              <tr class="border-b dark:border-gray-700">
+                <td class="px-2 py-4">
+                  I keep a detailed record of all my debts and payment
+                  deadlines.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q5"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q5"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q5"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q5"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q5"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+              <tr class="border-b dark:border-gray-700">
+                <td class="px-2 py-4">
+                  I prefer to use cash because it makes me more aware of my
+                  spending.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q6"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q6"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q6"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q6"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q6"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="px-2 py-4">
+                  I am very disciplined when it comes to saving money.
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q7"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q7"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q7"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q7"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+                <td class="px-2 py-4 text-center">
+                  <input
+                    type="radio"
+                    name="q7"
+                    class="form-radio text-primary focus:ring-primary"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pt-6 mt-4 border-t border-gray-200 dark:border-gray-700">
+          <button
+            id="submit-questionnaire"
+            class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white font-bold hover:bg-primary/90"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Questionnaire Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-sm p-8 text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success/20 text-success mb-4">
+                <span class="material-symbols-outlined text-4xl">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">Questionnaire Submitted!</h3>
+            <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">Thank you for completing the questionnaire. Your responses have been saved.</p>
+            <button id="close-success-modal" class="w-full rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
+                Continue
+            </button>
+        </div>
+    </div>
+
+
     <script>
-      // Wait for the document to be fully loaded
       document.addEventListener("DOMContentLoaded", () => {
-        // Get the elements
+        // --- Modal Handlers ---
         const employmentModal = document.getElementById("employment-modal");
-        const openModalBtn = document.getElementById("open-employment-modal");
-        const closeModalBtn = document.getElementById("close-employment-modal");
+        const openEmploymentBtn = document.getElementById(
+          "open-employment-modal"
+        );
+        const closeEmploymentBtn = document.getElementById(
+          "close-employment-modal"
+        );
 
-        // Function to open the modal
-        const openModal = () => {
-          if (employmentModal) {
-            employmentModal.classList.remove("hidden");
-          }
+        const socialModal = document.getElementById("social-modal");
+        const openSocialBtn = document.getElementById("open-social-modal");
+        const closeSocialBtn = document.getElementById("close-social-modal");
+
+        const questionnaireModal = document.getElementById(
+          "questionnaire-modal"
+        );
+        const openQuestionnaireBtn = document.getElementById(
+          "open-questionnaire-modal"
+        );
+        const closeQuestionnaireBtn = document.getElementById(
+          "close-questionnaire-modal"
+        );
+        const submitQuestionnaireBtn = document.getElementById("submit-questionnaire");
+
+        const successModal = document.getElementById("success-modal");
+        const closeSuccessBtn = document.getElementById("close-success-modal");
+
+
+        const openModal = (modal) => {
+          if (modal) modal.classList.remove("hidden");
         };
-
-        // Function to close the modal
-        const closeModal = () => {
-          if (employmentModal) {
-            employmentModal.classList.add("hidden");
-          }
+        const closeModal = (modal) => {
+          if (modal) modal.classList.add("hidden");
         };
 
         // --- Event Listeners ---
+        openEmploymentBtn.addEventListener("click", () =>
+          openModal(employmentModal)
+        );
+        closeEmploymentBtn.addEventListener("click", () =>
+          closeModal(employmentModal)
+        );
 
-        // Open modal when the button is clicked
-        if (openModalBtn) {
-          openModalBtn.addEventListener("click", openModal);
-        }
+        openSocialBtn.addEventListener("click", () => openModal(socialModal));
+        closeSocialBtn.addEventListener("click", () => closeModal(socialModal));
 
-        // Close modal when the 'X' button is clicked
-        if (closeModalBtn) {
-          closeModalBtn.addEventListener("click", closeModal);
-        }
+        openQuestionnaireBtn.addEventListener("click", () =>
+          openModal(questionnaireModal)
+        );
+        closeQuestionnaireBtn.addEventListener("click", () =>
+          closeModal(questionnaireModal)
+        );
+        
+        submitQuestionnaireBtn.addEventListener("click", () => {
+            closeModal(questionnaireModal);
+            openModal(successModal);
+        });
 
-        // Close modal when clicking on the backdrop (the overlay)
-        if (employmentModal) {
-          employmentModal.addEventListener("click", (event) => {
-            // We check if the click is on the backdrop itself
-            if (event.target === employmentModal) {
-              closeModal();
-            }
-          });
-        }
+        closeSuccessBtn.addEventListener("click", () => closeModal(successModal));
 
-        // Optional: Close modal with the 'Escape' key
+
+        // --- Close on backdrop click ---
+        window.addEventListener("click", (event) => {
+          if (event.target === employmentModal) closeModal(employmentModal);
+          if (event.target === socialModal) closeModal(socialModal);
+          if (event.target === questionnaireModal) closeModal(questionnaireModal);
+          if (event.target === successModal) closeModal(successModal);
+        });
+
+        // --- Global Escape Key Listener ---
         document.addEventListener("keydown", (event) => {
-          if (
-            event.key === "Escape" &&
-            !employmentModal.classList.contains("hidden")
-          ) {
-            closeModal();
+          if (event.key === "Escape") {
+            closeModal(employmentModal);
+            closeModal(socialModal);
+            closeModal(questionnaireModal);
+            closeModal(successModal);
           }
         });
       });
