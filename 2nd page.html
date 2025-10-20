@@ -158,16 +158,18 @@
                       Loan Purpose/Financial Goal
                     </h2>
                   </div>
-                  <button
-                    id="open-questionnaire-modal"
-                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                  >
-                    <h2
-                      class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
-                    >
-                      Psychometric Questionnaire
-                    </h2>
-                  </button>
+                   <div class="flex flex-col gap-3">
+                        <h2 class="text-[#343A40] dark:text-white text-lg font-bold leading-tight">
+                        Psychometric Questionnaire
+                        </h2>
+                        <button id="open-questionnaire-modal" class="w-full cursor-pointer text-left p-3 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900">
+                        Click to start
+                        </button>
+                        <div class="flex items-center gap-2 mt-2">
+                        <input type="checkbox" id="allow-data-use" name="allow-data-use" checked class="form-checkbox h-4 w-4 rounded text-primary focus:ring-primary border-gray-300 dark:border-gray-600 dark:bg-gray-900 dark:focus:ring-offset-gray-900" />
+                        <label for="allow-data-use" class="text-sm text-[#4c809a] dark:text-gray-400 select-none">I allow to use this data for credit score rating.</label>
+                        </div>
+                  </div>
                 </div>
               </div>
 
@@ -193,7 +195,7 @@
       class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
     >
       <div
-        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] overflow-y-auto"
+        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] flex flex-col"
       >
         <button
           id="close-employment-modal"
@@ -201,10 +203,12 @@
         >
           <span class="material-symbols-outlined">close</span>
         </button>
-        <h3 class="text-2xl font-bold mb-6 text-[#343A40] dark:text-white">
-          Employment History
-        </h3>
-        <div class="space-y-6">
+        <div class="flex-shrink-0">
+            <h3 class="text-2xl font-bold mb-6 text-[#343A40] dark:text-white">
+            Employment History
+            </h3>
+        </div>
+        <div class="flex-grow overflow-y-auto space-y-6">
           <div>
             <label
               for="employment-file"
@@ -221,8 +225,68 @@
               class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary/20 file:text-primary hover:file:bg-primary/30 file:cursor-pointer"
             />
           </div>
-          <div
-            class="flex justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700"
+           <div>
+            <h4
+              class="text-lg font-semibold text-[#343A40] dark:text-white mb-4"
+            >
+              Previous Employers
+            </h4>
+            <div class="space-y-4">
+              <div
+                class="p-4 border border-[#cfdfe7] dark:border-gray-700 rounded-lg space-y-4"
+              >
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <label
+                      for="employer-name-1"
+                      class="block text-sm font-medium text-[#4c809a] dark:text-gray-400"
+                      >Employer Name</label
+                    >
+                    <input
+                      type="text"
+                      id="employer-name-1"
+                      placeholder="e.g., Razer Inc."
+                      class="mt-1 block w-full rounded-lg border-[#cfdfe7] dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="job-title-1"
+                      class="block text-sm font-medium text-[#4c809a] dark:text-gray-400"
+                      >Job Title</label
+                    >
+                    <input
+                      type="text"
+                      id="job-title-1"
+                      placeholder="e.g., Product Manager Intern"
+                      class="mt-1 block w-full rounded-lg border-[#cfdfe7] dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary text-sm"
+                    />
+                  </div>
+                   <div>
+                    <label
+                      for="employment-dates-1"
+                      class="block text-sm font-medium text-[#4c809a] dark:text-gray-400"
+                      >Dates of Employment</label
+                    >
+                    <input
+                      type="text"
+                      id="employment-dates-1"
+                      placeholder="e.g., Jan 2024 - Present"
+                      class="mt-1 block w-full rounded-lg border-[#cfdfe7] dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                class="w-full text-sm font-medium text-primary hover:bg-primary/10 dark:hover:bg-primary/20 py-2 rounded-lg transition-colors border-2 border-dashed border-primary/50 hover:border-primary"
+              >
+                + Add Another Employer
+              </button>
+            </div>
+          </div>
+        </div>
+         <div
+            class="flex-shrink-0 justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700"
           >
             <button
               class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold"
@@ -230,7 +294,6 @@
               <span class="truncate">Save & Close</span>
             </button>
           </div>
-        </div>
       </div>
     </div>
 
@@ -376,39 +439,19 @@
                   I enjoy planning my monthly budget and tracking all expenses.
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q2"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q2"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q2"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q2"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q2"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
                 </td>
               </tr>
               <tr class="border-b dark:border-gray-700">
@@ -417,39 +460,19 @@
                   cash on hand.
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q3"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q3"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q3"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q3"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q3"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
                 </td>
               </tr>
               <tr class="border-b dark:border-gray-700">
@@ -458,39 +481,19 @@
                   urgent expense.
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q4"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q4"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q4"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q4"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q4"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
                 </td>
               </tr>
               <tr class="border-b dark:border-gray-700">
@@ -499,39 +502,19 @@
                   deadlines.
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q5"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q5"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q5"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q5"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q5"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
                 </td>
               </tr>
               <tr class="border-b dark:border-gray-700">
@@ -540,39 +523,19 @@
                   spending.
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q6"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q6"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q6"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q6"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
                 </td>
                 <td class="px-2 py-4 text-center">
-                  <input
-                    type="radio"
-                    name="q6"
-                    class="form-radio text-primary focus:ring-primary"
-                  />
+                  <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
                 </td>
               </tr>
               <tr>
@@ -646,28 +609,17 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // --- Modal Handlers ---
         const employmentModal = document.getElementById("employment-modal");
-        const openEmploymentBtn = document.getElementById(
-          "open-employment-modal"
-        );
-        const closeEmploymentBtn = document.getElementById(
-          "close-employment-modal"
-        );
+        const openEmploymentBtn = document.getElementById( "open-employment-modal");
+        const closeEmploymentBtn = document.getElementById("close-employment-modal");
 
         const socialModal = document.getElementById("social-modal");
         const openSocialBtn = document.getElementById("open-social-modal");
         const closeSocialBtn = document.getElementById("close-social-modal");
 
-        const questionnaireModal = document.getElementById(
-          "questionnaire-modal"
-        );
-        const openQuestionnaireBtn = document.getElementById(
-          "open-questionnaire-modal"
-        );
-        const closeQuestionnaireBtn = document.getElementById(
-          "close-questionnaire-modal"
-        );
+        const questionnaireModal = document.getElementById("questionnaire-modal");
+        const openQuestionnaireBtn = document.getElementById("open-questionnaire-modal");
+        const closeQuestionnaireBtn = document.getElementById("close-questionnaire-modal");
         const submitQuestionnaireBtn = document.getElementById("submit-questionnaire");
 
         const successModal = document.getElementById("success-modal");
@@ -681,23 +633,14 @@
           if (modal) modal.classList.add("hidden");
         };
 
-        // --- Event Listeners ---
-        openEmploymentBtn.addEventListener("click", () =>
-          openModal(employmentModal)
-        );
-        closeEmploymentBtn.addEventListener("click", () =>
-          closeModal(employmentModal)
-        );
+        openEmploymentBtn.addEventListener("click", () => openModal(employmentModal));
+        closeEmploymentBtn.addEventListener("click", () => closeModal(employmentModal));
 
         openSocialBtn.addEventListener("click", () => openModal(socialModal));
         closeSocialBtn.addEventListener("click", () => closeModal(socialModal));
 
-        openQuestionnaireBtn.addEventListener("click", () =>
-          openModal(questionnaireModal)
-        );
-        closeQuestionnaireBtn.addEventListener("click", () =>
-          closeModal(questionnaireModal)
-        );
+        openQuestionnaireBtn.addEventListener("click", () => openModal(questionnaireModal));
+        closeQuestionnaireBtn.addEventListener("click", () => closeModal(questionnaireModal));
         
         submitQuestionnaireBtn.addEventListener("click", () => {
             closeModal(questionnaireModal);
@@ -706,8 +649,6 @@
 
         closeSuccessBtn.addEventListener("click", () => closeModal(successModal));
 
-
-        // --- Close on backdrop click ---
         window.addEventListener("click", (event) => {
           if (event.target === employmentModal) closeModal(employmentModal);
           if (event.target === socialModal) closeModal(socialModal);
@@ -715,7 +656,6 @@
           if (event.target === successModal) closeModal(successModal);
         });
 
-        // --- Global Escape Key Listener ---
         document.addEventListener("keydown", (event) => {
           if (event.key === "Escape") {
             closeModal(employmentModal);
