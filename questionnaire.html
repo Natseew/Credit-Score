@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Psychometric Questionnaire</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              success: "#28a745",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#343a40] dark:text-gray-200"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <div class="flex flex-1 justify-center py-5 px-4">
+          <div
+            class="layout-content-container flex flex-col w-full max-w-md flex-1"
+          >
+            <header
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7eff3] dark:border-gray-700 px-4 py-3"
+            >
+              <div
+                class="flex items-center gap-4 text-[#0d171b] dark:text-white"
+              >
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2
+                  class="text-xl font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Axiom
+                </h2>
+              </div>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 transition-colors"
+              >
+                <span class="truncate">Help</span>
+              </button>
+            </header>
+            <main class="flex flex-col flex-1 p-4 md:p-6">
+               <!-- Progress Bar -->
+               <div class="flex flex-col gap-3 mb-8">
+                  <div class="flex gap-6 justify-between">
+                    <p
+                      class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal"
+                    >
+                      Step 3 of 5
+                    </p>
+                  </div>
+                  <div class="rounded bg-[#cfdfe7] dark:bg-gray-700">
+                    <div
+                      class="h-2 rounded bg-primary"
+                      style="width: 60%"
+                    ></div>
+                  </div>
+                </div>
+
+              <h3 class="text-2xl font-bold mb-4 text-[#343A40] dark:text-white">
+                Psychometric Questionnaire
+              </h3>
+              <div class="overflow-x-auto flex-grow mb-6">
+                <table class="w-full text-sm text-left">
+                  <thead
+                    class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700"
+                  >
+                    <tr>
+                      <th scope="col" class="px-2 py-3">Statement</th>
+                      <th
+                        scope="col"
+                        class="px-2 py-3 text-center"
+                        title="Strongly Disagree"
+                      >
+                        1
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-3 text-center"
+                        title="Disagree"
+                      >
+                        2
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-3 text-center"
+                        title="Neutral"
+                      >
+                        3
+                      </th>
+                      <th scope="col" class="px-2 py-3 text-center" title="Agree">
+                        4
+                      </th>
+                      <th
+                        scope="col"
+                        class="px-2 py-3 text-center"
+                        title="Strongly Agree"
+                      >
+                        5
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-600 dark:text-gray-300">
+                    <tr class="border-b dark:border-gray-700">
+                      <td class="px-2 py-4">
+                        I rarely worry about having enough money for the future.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q1" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q1" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q1" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q1" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q1" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-gray-700">
+                      <td class="px-2 py-4">
+                        I enjoy planning my monthly budget and tracking all expenses.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q2" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-gray-700">
+                      <td class="px-2 py-4">
+                        If I see something I want, I buy it even if I don't have the cash on hand.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q3" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-gray-700">
+                      <td class="px-2 py-4">
+                        It is acceptable to miss a small payment if I have a more urgent expense.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q4" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-gray-700">
+                      <td class="px-2 py-4">
+                        I keep a detailed record of all my debts and payment deadlines.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q5" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                    <tr class="border-b dark:border-gray-700">
+                      <td class="px-2 py-4">
+                        I prefer to use cash because it makes me more aware of my spending.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q6" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-2 py-4">
+                        I am very disciplined when it comes to saving money.
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q7" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q7" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q7" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q7" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                      <td class="px-2 py-4 text-center">
+                        <input type="radio" name="q7" class="form-radio text-primary focus:ring-primary"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pt-4 mt-auto">
+                <button
+                  id="submit-questionnaire"
+                  class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white font-bold hover:bg-primary/90"
+                >
+                  Submit
+                </button>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Questionnaire Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-sm p-8 text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success/20 text-success mb-4">
+                <span class="material-symbols-outlined text-4xl">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">Questionnaire Submitted!</h3>
+            <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">Thank you for completing the questionnaire. Your responses have been saved.</p>
+            <button id="close-success-modal" class="w-full rounded-lg h-12 px-6 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-colors">
+                Continue
+            </button>
+        </div>
+    </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            const submitBtn = document.getElementById("submit-questionnaire");
+            const successModal = document.getElementById("success-modal");
+            const closeSuccessBtn = document.getElementById("close-success-modal");
+
+            const openModal = (modal) => {
+                if (modal) modal.classList.remove("hidden");
+            };
+            const closeModal = (modal) => {
+                 if (modal) modal.classList.add("hidden");
+            };
+
+            submitBtn.addEventListener("click", () => {
+                openModal(successModal);
+            });
+
+            closeSuccessBtn.addEventListener("click", () => {
+                closeModal(successModal);
+                // Navigate to the next page
+                window.location.href = "3rd page.html";
+            });
+
+            // Close modal on backdrop click
+            window.addEventListener("click", (event) => {
+                if (event.target === successModal) closeModal(successModal);
+            });
+
+            // Close modal with Escape key
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && !successModal.classList.contains("hidden")) {
+                    closeModal(successModal);
+                }
+            });
+         });
+    </script>
+  </body>
+</html>
+
