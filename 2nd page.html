@@ -95,13 +95,13 @@
                     <p
                       class="text-[#4c809a] dark:text-gray-400 text-sm font-medium leading-normal"
                     >
-                      Step 2 of 5
+                      Step 2 of 5 
                     </p>
                   </div>
                   <div class="rounded bg-[#cfdfe7] dark:bg-gray-700">
                     <div
                       class="h-2 rounded bg-primary"
-                      style="width: 40%"
+                      style="width: 40%" 
                     ></div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@
                     </h2>
                   </button>
                   <button
-                    id="open-social-modal"
+                    id="open-licenses-modal" 
                     class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
                     <h2
@@ -140,24 +140,26 @@
                       Licenses/Certifications
                     </h2>
                   </button>
-                  <div
-                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  <button
+                    id="open-education-modal" 
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
                     <h2
                       class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
                     >
                       Education Level
                     </h2>
-                  </div>
-                  <div
-                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center"
+                  </button>
+                  <button
+                    id="open-goal-modal" 
+                    class="flex flex-1 gap-3 rounded-lg border border-[#cfdfe7] dark:border-gray-700 bg-white dark:bg-background-dark p-4 items-center text-left w-full cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
                     <h2
                       class="text-[#343A40] dark:text-white text-base font-bold leading-tight"
                     >
                       Loan Purpose/Financial Goal
                     </h2>
-                  </div>
+                  </button>
                 </div>
               </div>
 
@@ -286,62 +288,104 @@
       </div>
     </div>
 
-    <!-- Social Media Modal -->
-    <div
-      id="social-modal"
-      class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden"
-    >
-      <div
-        class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] overflow-y-auto"
-      >
-        <button
-          id="close-social-modal"
-          class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white transition-colors"
-        >
-          <span class="material-symbols-outlined">close</span>
-        </button>
-        <h3 class="text-2xl font-bold mb-2 text-[#343A40] dark:text-white">
-          Connect Social Accounts
-        </h3>
-        <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-6">
-          Log in for further verification.
-        </p>
-        <div class="space-y-3">
-          <button
-            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#0077B5] text-white font-bold hover:bg-[#005E90]"
-          >
-            <i class="fa-brands fa-linkedin-in text-xl"></i>
-            <span>Connect with LinkedIn</span>
-          </button>
-          <button
-            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-black text-white font-bold hover:bg-gray-800"
-          >
-            <i class="fa-brands fa-x-twitter text-xl"></i>
-            <span>Connect with X</span>
-          </button>
-          <button
-            class="w-full flex items-center justify-center gap-3 h-12 px-6 rounded-lg bg-[#E1306C] text-white font-bold hover:bg-[#c91c58]"
-          >
-            <i class="fa-brands fa-instagram text-xl"></i>
-            <span>Connect with Instagram</span>
-          </button>
+    <!-- Licenses/Certifications Modal -->
+    <div id="licenses-modal" class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] flex flex-col">
+            <button id="close-licenses-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+             <h3 class="text-2xl font-bold mb-6 text-[#343A40] dark:text-white">Licenses & Certifications</h3>
+             <div>
+                <label for="license-file" class="block text-base font-medium text-[#343A40] dark:text-gray-300 mb-2">Upload Documents</label>
+                <p class="text-sm text-[#4c809a] dark:text-gray-400 mb-3">Attach relevant professional licenses or certifications.</p>
+                <input id="license-file" type="file" multiple class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary/20 file:text-primary hover:file:bg-primary/30 file:cursor-pointer"/>
+            </div>
+            <div class="flex-shrink-0 justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700">
+                <button id="save-licenses-data" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold">
+                <span class="truncate">Save & Close</span>
+                </button>
+            </div>
         </div>
-      </div>
+    </div>
+    
+    <!-- Education Level Modal -->
+    <div id="education-modal" class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] flex flex-col">
+            <button id="close-education-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h3 class="text-2xl font-bold mb-6 text-[#343A40] dark:text-white">Education Level</h3>
+            <div class="space-y-4">
+                 <label class="block">
+                    <span class="text-gray-700 dark:text-gray-300">Highest Level Completed</span>
+                    <select class="form-select mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary">
+                      <option>High School / Secondary School</option>
+                      <option>Diploma / Associate's Degree</option>
+                      <option>Bachelor's Degree</option>
+                      <option>Master's Degree</option>
+                      <option>Doctorate / Professional Degree</option>
+                      <option>Other</option>
+                    </select>
+                </label>
+            </div>
+             <div class="flex-shrink-0 justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700">
+                <button id="save-education-data" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold">
+                <span class="truncate">Save & Close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loan Purpose Modal -->
+    <div id="goal-modal" class="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4 hidden">
+        <div class="bg-background-light dark:bg-background-dark rounded-xl shadow-xl w-full max-w-md p-6 md:p-8 relative z-50 max-h-[90vh] flex flex-col">
+            <button id="close-goal-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 dark:hover:text-white">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h3 class="text-2xl font-bold mb-6 text-[#343A40] dark:text-white">Loan Purpose / Financial Goal</h3>
+             <div class="space-y-4">
+                 <label class="block">
+                    <span class="text-gray-700 dark:text-gray-300">Describe your goal</span>
+                    <textarea class="form-textarea mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-primary focus:ring-primary" rows="3" placeholder="E.g., Consolidate debt, purchase a car, home renovation..."></textarea>
+                </label>
+            </div>
+             <div class="flex-shrink-0 justify-end pt-6 mt-6 border-t border-[#e7eff3] dark:border-gray-700">
+                <button id="save-goal-data" class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold">
+                <span class="truncate">Save & Close</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // --- Modal Handlers ---
+        // --- Modal Elements ---
         const employmentModal = document.getElementById("employment-modal");
-        const openEmploymentBtn = document.getElementById( "open-employment-modal");
+        const licensesModal = document.getElementById("licenses-modal"); 
+        const educationModal = document.getElementById("education-modal");
+        const goalModal = document.getElementById("goal-modal");
+        
+
+        // --- Open Buttons ---
+        const openEmploymentBtn = document.getElementById("open-employment-modal");
+        const openLicensesBtn = document.getElementById("open-licenses-modal"); 
+        const openEducationBtn = document.getElementById("open-education-modal");
+        const openGoalBtn = document.getElementById("open-goal-modal");
+       
+
+        // --- Close Buttons ---
         const closeEmploymentBtn = document.getElementById("close-employment-modal");
-        const saveEmploymentBtn = document.getElementById("save-employment-data"); // Get the save button
+        const closeLicensesBtn = document.getElementById("close-licenses-modal"); 
+        const closeEducationBtn = document.getElementById("close-education-modal");
+        const closeGoalBtn = document.getElementById("close-goal-modal");
+        
+        // --- Save Buttons ---
+        const saveEmploymentBtn = document.getElementById("save-employment-data");
+        const saveLicensesBtn = document.getElementById("save-licenses-data"); 
+        const saveEducationBtn = document.getElementById("save-education-data");
+        const saveGoalBtn = document.getElementById("save-goal-data");
+        
 
-        const socialModal = document.getElementById("social-modal");
-        const openSocialBtn = document.getElementById("open-social-modal");
-        const closeSocialBtn = document.getElementById("close-social-modal");
-
-        // Questionnaire related elements REMOVED
 
         const openModal = (modal) => {
           if (modal) modal.classList.remove("hidden");
@@ -353,30 +397,37 @@
         // --- Event Listeners ---
         openEmploymentBtn.addEventListener("click", () => openModal(employmentModal));
         closeEmploymentBtn.addEventListener("click", () => closeModal(employmentModal));
-        // Add listener for the save button inside the employment modal
-        if (saveEmploymentBtn) {
-            saveEmploymentBtn.addEventListener("click", () => closeModal(employmentModal));
-        }
+        if (saveEmploymentBtn) saveEmploymentBtn.addEventListener("click", () => closeModal(employmentModal));
 
+        openLicensesBtn.addEventListener("click", () => openModal(licensesModal)); 
+        closeLicensesBtn.addEventListener("click", () => closeModal(licensesModal));
+        if (saveLicensesBtn) saveLicensesBtn.addEventListener("click", () => closeModal(licensesModal));
+        
+        openEducationBtn.addEventListener("click", () => openModal(educationModal));
+        closeEducationBtn.addEventListener("click", () => closeModal(educationModal));
+        if (saveEducationBtn) saveEducationBtn.addEventListener("click", () => closeModal(educationModal));
 
-        openSocialBtn.addEventListener("click", () => openModal(socialModal));
-        closeSocialBtn.addEventListener("click", () => closeModal(socialModal));
+        openGoalBtn.addEventListener("click", () => openModal(goalModal));
+        closeGoalBtn.addEventListener("click", () => closeModal(goalModal));
+        if (saveGoalBtn) saveGoalBtn.addEventListener("click", () => closeModal(goalModal));
 
-        // Questionnaire related listeners REMOVED
 
         // --- Close on backdrop click ---
         window.addEventListener("click", (event) => {
           if (event.target === employmentModal) closeModal(employmentModal);
-          if (event.target === socialModal) closeModal(socialModal);
-          // Questionnaire related backdrop close REMOVED
+          if (event.target === licensesModal) closeModal(licensesModal); 
+          if (event.target === educationModal) closeModal(educationModal);
+          if (event.target === goalModal) closeModal(goalModal);
+         
         });
 
         // --- Global Escape Key Listener ---
         document.addEventListener("keydown", (event) => {
           if (event.key === "Escape") {
             closeModal(employmentModal);
-            closeModal(socialModal);
-            // Questionnaire related escape close REMOVED
+            closeModal(licensesModal); 
+            closeModal(educationModal);
+            closeModal(goalModal);
           }
         });
       });
